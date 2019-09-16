@@ -27,7 +27,7 @@ now is the time for the biggest blooper shit...
 
 image crappp
 
-![zuck](/assets/images/zuck.jpg)
+![zuck](/_site/assets/images/zuck.jpg)
 
 {% highlight ruby %}
 def print_hi(name)
