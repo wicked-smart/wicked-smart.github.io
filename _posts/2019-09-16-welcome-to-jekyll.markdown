@@ -27,7 +27,11 @@ now is the time for the biggest blooper shit...
 
 image crappp
 
-![zuck](/_site/assets/images/zuck.jpg)
+![Prem](/assets/PREM.png)
+
+i love akshay kumar memes...hahha
+
+![Akshay-kumar](/assets/akshay.jpeg)
 
 {% highlight ruby %}
 def print_hi(name)

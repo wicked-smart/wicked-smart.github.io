@@ -28,12 +28,12 @@ theme: minima
 plugins:
   - jekyll-feed
 
-defaults:
-    - scope:
-        path: "_site/assets/images"
-
-      values:
-          image: true
+#defaults:
+#    - scope:
+#        path: "_site/assets/images"
+#
+#     values:
+#          image: true
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
