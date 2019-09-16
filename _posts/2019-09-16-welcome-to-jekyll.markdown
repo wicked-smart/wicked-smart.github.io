@@ -23,6 +23,12 @@ or just go to **flying beasts** [You-Tube Channel][flying-beast] to have some co
 
 etc..etc..etc..
 
+now is the time for the biggest blooper shit...
+
+image crappp
+
+![zuck](/assets/images/zuck.jpg)
+
 {% highlight ruby %}
 def print_hi(name)
   puts "Hi, #{name}"
