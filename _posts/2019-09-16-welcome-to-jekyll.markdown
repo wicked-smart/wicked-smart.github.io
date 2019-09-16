@@ -37,3 +37,5 @@ Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most ou
 [jekyll-gh]:   https://github.com/jekyll/jekyll
 [jekyll-talk]: https://talk.jekyllrb.com/
 [flying-beast]: https://www.youtube.com/channel/UCNSdjX4ry9fICqeObdZPAZQ
+[ronnie-and-barty]: https://www.youtube.com/user/THERONNIEVOX
+[casey-niestat]: https://www.youtube.com/user/caseyneistat
