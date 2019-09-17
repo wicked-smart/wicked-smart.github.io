@@ -1,10 +1,9 @@
-------
+---
 layout : post
 title : "All-Things-DNS"
 date : 2019-09-17 +05:30 GMT
 category : DNS web-concepts
-
------
+---
 
 # All Things DNS
 
