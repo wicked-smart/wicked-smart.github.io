@@ -1,0 +1,4 @@
+# all the files starting with .
+
+.git
+.sass-cache
