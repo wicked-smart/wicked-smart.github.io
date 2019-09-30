@@ -27,7 +27,6 @@ now is the time for the biggest blooper shit...
 
 image crappp
 
-![Prem](/assets/PREM.png)
 
 i love akshay kumar memes...hahha
 
