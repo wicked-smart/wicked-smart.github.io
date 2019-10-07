@@ -10,6 +10,9 @@ To add new posts, simply add a file in the `_posts` directory that follows the c
 
 Jekyll also offers powerful support for code snippets:
 
+# Making some changes from this new branch 
+
+[![first-timers-only](https://img.shields.io/badge/first--timers--only-friendly-blue.svg?style=flat-square)](https://www.firsttimersonly.com/)
 #*Making some Italic chanegs*
 
 It's very easy to make some texts **Bold** and other words *Italic* with Markdown.You can even [do google](https://google.com)! or try having to look into the [Jekyll-Docs][jekyll-docs]
