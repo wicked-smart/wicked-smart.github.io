@@ -1,0 +1,66 @@
+<ul>
+  <li><a href="#what is gpg2?">What is gpg2 ?</a></li>
+  <li><a href="#Uses of gpg">Where and how gpg2 is used?</a></li>
+  <li>Create GPG2 keys</li>
+  <li>Generate a Revocation Certificate</li>
+  <li>Exchange Public Keys
+    <ul>
+      <li>Export Your Public Keys</li>
+      <li>Import and Validate a Public Key</li>
+      <li>Submit Your Public Key to a Key Server</li>
+    </ul>
+  </li>
+  <li>Encrypt a Message</li>
+  <li>Decrypt a Message</li>
+</ul>
+
+<h2 id="what-is-gpg2">what is gpg2?</h2>
+<ul>
+  <li>GNU Privacy Gaurd (GnuPG), Also Known as GPG, is a tool for secure communication  used to exchange encrypted files and messages between client machines using Public-Key Cryptography Methods.</li>
+</ul>
+
+<h2 id="uses-of-gpg">Uses of gpg</h2>
+<ol>
+  <li><strong>Checking file Integrity</strong>:-
+   RStudio Signed Builds
+    Official RStudio builds for Linux-based operating systems may be signed with a GnuPG key.
+    <strong>gpg2</strong> can be used to validate the binary ourselves to
+    <ul>
+      <li>Ensure the binaries are genuine artifacts produces by RStudio, and</li>
+      <li>they have not been tampered with any third party during transmission</li>
+    </ul>
+
+    <p>Step 1: Obtaining the Public Key:-
+   Importing RStudio Public Code-Signing Key from keysever using gpg2</p>
+
+    <blockquote>
+      <p>gpg2 –keyserver keys.gnupg.net –recv-keys 3F32EE77E331692F</p>
+    </blockquote>
+
+    <p><img src="/assets/Validate-RStudio-Code-Signing.png" alt="key-import-image" />
+ Step 2: Validating Build Signatures:-</p>
+
+    <blockquote>
+      <p>dpkg-sig –verify rstudio-download-1.2.3.deb</p>
+    </blockquote>
+  </li>
+  <li>
+    <p><strong>Sending Encrypted Messages and Files</strong> :-
+    * Encrypt Document to be sent</p>
+
+    <blockquote>
+      <p>gpg –output encrypted-doc.gpg –encrypt –sign –armor –recipient tomcrse61@gmail.com –recipient kumar877prem@gmail.com doc-to-encrypt.txt</p>
+    </blockquote>
+  </li>
+</ol>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* Decrypt Document Recieved
+
+
+  &gt;  gpg --output decrypted-doc --decrypt doc-to-decrypt.gpg
+
+
+  &gt; This is a very strange
+  &gt; Thing to see it Through
+  &gt; Extra-Ordinary Times , Extra-Ordinary Measures
+</code></pre></div></div>

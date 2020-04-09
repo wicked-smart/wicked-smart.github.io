@@ -3,17 +3,19 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Grokking all things in the universe ! | This is an awesome description of my new site , which i’m gonna change later as right now i’m in testing MODE !!!</title>
+<title>Code Snippets | Grokking all things in the universe !</title>
 <meta name="generator" content="Jekyll v3.8.6" />
-<meta property="og:title" content="Grokking all things in the universe !" />
+<meta property="og:title" content="Code Snippets" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="This is an awesome description of my new site , which i’m gonna change later as right now i’m in testing MODE !!!" />
-<meta property="og:description" content="This is an awesome description of my new site , which i’m gonna change later as right now i’m in testing MODE !!!" />
-<link rel="canonical" href="http://localhost:4000/" />
-<meta property="og:url" content="http://localhost:4000/" />
+<meta name="description" content="PHP Script" />
+<meta property="og:description" content="PHP Script" />
+<link rel="canonical" href="http://localhost:4000/2020/03/06/php-script-snippet.html" />
+<meta property="og:url" content="http://localhost:4000/2020/03/06/php-script-snippet.html" />
 <meta property="og:site_name" content="Grokking all things in the universe !" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-03-06T00:00:00+05:30" />
 <script type="application/ld+json">
-{"name":"Grokking all things in the universe !","description":"This is an awesome description of my new site , which i’m gonna change later as right now i’m in testing MODE !!!","@type":"WebSite","url":"http://localhost:4000/","headline":"Grokking all things in the universe !","@context":"https://schema.org"}</script>
+{"description":"PHP Script","@type":"BlogPosting","url":"http://localhost:4000/2020/03/06/php-script-snippet.html","headline":"Code Snippets","dateModified":"2020-03-06T00:00:00+05:30","datePublished":"2020-03-06T00:00:00+05:30","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2020/03/06/php-script-snippet.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Grokking all things in the universe !" /></head>
 <body><header class="site-header" role="banner">
@@ -33,21 +35,46 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="home">
-<h2 class="post-list-heading">Posts</h2>
-    <ul class="post-list"><li><span class="post-meta">Mar 6, 2020</span>
-        <h3>
-          <a class="post-link" href="/2020/03/06/php-script-snippet.html">
-            Code Snippets
-          </a>
-        </h3></li><li><span class="post-meta">Feb 29, 2020</span>
-        <h3>
-          <a class="post-link" href="/2020/02/29/Using-GPG-to-exchange-messages.html">
-            Using gpg2 to exchange messages and files
-          </a>
-        </h3></li></ul>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-    <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p></div>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Code Snippets</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2020-03-06T00:00:00+05:30" itemprop="datePublished">Mar 6, 2020
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h1 id="php-script">PHP Script</h1>
+
+<p><strong>permission.php</strong></p>
+
+<blockquote>
+  <p>php script to configure file and folder permissions of website at one go rather than manually doing chmod’s to every file extension</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;?php
+  $dir = dirname( __FILE__ );
+  $extensions_to_chmod_644 = array(
+  "jpg","gif","png","ico","css","md","txt","html","htm","xml","js","csv","json","htaccess");
+  $extension_separator = "\|";
+  $command_to_chmod_644 = 'find "' . $dir . '" -type f -iregex ".*\.\(';
+  foreach( $extensions_to_chmod_644 as $ext ) {
+      $command_to_chmod_644 .= $ext . $extension_separator;
+  }
+  $command_to_chmod_644 =
+  rtrim($command_to_chmod_644,$extension_separator);
+  $command_to_chmod_644 .= '\)$" -print0 | xargs -0 chmod 644'. PHP_EOL;
+  shell_exec($command_to_chmod_644);
+
+  $command_to_chmod_755 = "find '$dir' -type d -print0 | xargs -0 chmod 755" . PHP_EOL;
+  shell_exec($command_to_chmod_755);
+
+</code></pre></div></div>
+
+
+  </div><a class="u-url" href="/2020/03/06/php-script-snippet.html" hidden></a>
+</article>
 
       </div>
     </main><footer class="site-footer h-card">

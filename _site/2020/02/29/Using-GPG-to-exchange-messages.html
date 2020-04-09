@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Using gpg2 to exchange messages and files | Grokking all things in the universe !</title>
+<meta name="generator" content="Jekyll v3.8.6" />
+<meta property="og:title" content="Using gpg2 to exchange messages and files" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="What is gpg2 ? Where and how gpg2 is used? Create GPG2 keys Generate a Revocation Certificate Exchange Public Keys Export Your Public Keys Import and Validate a Public Key Submit Your Public Key to a Key Server Encrypt a Message Decrypt a Message" />
+<meta property="og:description" content="What is gpg2 ? Where and how gpg2 is used? Create GPG2 keys Generate a Revocation Certificate Exchange Public Keys Export Your Public Keys Import and Validate a Public Key Submit Your Public Key to a Key Server Encrypt a Message Decrypt a Message" />
+<link rel="canonical" href="http://localhost:4000/2020/02/29/Using-GPG-to-exchange-messages.html" />
+<meta property="og:url" content="http://localhost:4000/2020/02/29/Using-GPG-to-exchange-messages.html" />
+<meta property="og:site_name" content="Grokking all things in the universe !" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-02-29T00:00:00+05:30" />
+<script type="application/ld+json">
+{"description":"What is gpg2 ? Where and how gpg2 is used? Create GPG2 keys Generate a Revocation Certificate Exchange Public Keys Export Your Public Keys Import and Validate a Public Key Submit Your Public Key to a Key Server Encrypt a Message Decrypt a Message","@type":"BlogPosting","url":"http://localhost:4000/2020/02/29/Using-GPG-to-exchange-messages.html","headline":"Using gpg2 to exchange messages and files","dateModified":"2020-02-29T00:00:00+05:30","datePublished":"2020-02-29T00:00:00+05:30","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2020/02/29/Using-GPG-to-exchange-messages.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Grokking all things in the universe !" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Grokking all things in the universe !</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Using gpg2 to exchange messages and files</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2020-02-29T00:00:00+05:30" itemprop="datePublished">Feb 29, 2020
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul>
+  <li><a href="#What is gpg2?">What is gpg2 ?</a></li>
+  <li><a href="#Uses of gpg">Where and how gpg2 is used?</a></li>
+  <li><a href="#Create GPG2 keys">Create GPG2 keys</a></li>
+  <li><a href="#Generate a Revocation Certificate">Generate a Revocation Certificate</a></li>
+  <li>Exchange Public Keys
+    <ul>
+      <li>Export Your Public Keys</li>
+      <li>Import and Validate a Public Key</li>
+      <li>Submit Your Public Key to a Key Server</li>
+    </ul>
+  </li>
+  <li>Encrypt a Message</li>
+  <li>Decrypt a Message</li>
+</ul>
+
+<h2 id="what-is-gpg2">What is gpg2?</h2>
+<ul>
+  <li>GNU Privacy Gaurd (GnuPG), Also Known as GPG, is a tool for secure communication  used to exchange encrypted files and messages between client machines using Public-Key Cryptography Methods.</li>
+</ul>
+
+<h2 id="uses-of-gpg">Uses of gpg</h2>
+<ol>
+  <li><strong>Checking file Integrity</strong>:-
+   RStudio Signed Builds
+    Official RStudio builds for Linux-based operating systems may be signed with a GnuPG key.
+    <strong>gpg2</strong> can be used to validate the binary ourselves to
+    <ul>
+      <li>Ensure the binaries are genuine artifacts produces by RStudio, and</li>
+      <li>they have not been tampered with any third party during transmission</li>
+    </ul>
+
+    <p>Step 1: Obtaining the Public Key:-</p>
+
+    <p>Importing RStudio Public Code-Signing Key from keysever using gpg2</p>
+
+    <blockquote>
+      <p>gpg2 –keyserver keys.gnupg.net –recv-keys 3F32EE77E331692F</p>
+    </blockquote>
+
+    <p>Step 2: Validating Build Signatures:-</p>
+
+    <blockquote>
+      <p>dpkg-sig –verify rstudio-download-1.2.3.deb</p>
+    </blockquote>
+
+    <p><img src="/assets/Validate-RStudio-Code-Signing.png" alt="key-import-image" /></p>
+  </li>
+  <li>
+    <p><strong>Sending Encrypted Messages and Files</strong> * Encrypt Document to be sent</p>
+
+    <blockquote>
+      <p>gpg2 –output encrypted-doc.gpg –encrypt –sign –armor –recipient tomcrse61@gmail.com –recipient kumar877prem@gmail.com doc-to-encrypt.txt</p>
+    </blockquote>
+  </li>
+</ol>
+
+<p>Decrypt Document Recieved</p>
+
+<blockquote>
+  <p>gpg2 –output decrypted-doc –decrypt doc-to-decrypt.gpg</p>
+</blockquote>
+
+<h2 id="create-gpg2-keys">Create GPG2 Keys</h2>
+
+<ol>
+  <li>
+    <p>Download and Install the most recent version of GPG Command Line Tool</p>
+
+    <blockquote>
+      <p>sudo apt update
+sudo apt install gnupg</p>
+    </blockquote>
+  </li>
+  <li>
+    <p>Create a new primary keypair</p>
+
+    <blockquote>
+      <p>gpg2 –full-generate-keys</p>
+    </blockquote>
+
+    <p><strong><em>ScreenDump of the above command</em></strong></p>
+  </li>
+</ol>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>~/$ gpg2 --full-gen-key
+gpg (GnuPG) 2.2.4; Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+~/$ Please select what kind of key you want:
+   (1) RSA and RSA (default)
+   (2) DSA and Elgamal
+   (3) DSA (sign only)
+   (4) RSA (sign only)
+Your selection? 1
+RSA keys may be between 1024 and 4096 bits long.
+What keysize do you want? (3072) 4096
+Requested keysize is 4096 bits
+Please specify how long the key should be valid.
+         0 = key does not expire
+      &lt;n&gt;  = key expires in n days
+      &lt;n&gt;w = key expires in n weeks
+      &lt;n&gt;m = key expires in n months
+      &lt;n&gt;y = key expires in n years
+~/$ Key is valid for? (0) 10m
+Key expires at Sat Jan 30 23:54:15 2021 UTC
+~/$ Is this correct? (y/N) y
+
+GnuPG needs to construct a user ID to identify your key.
+
+Real name: prem kumar
+Email address: marzaanvan@gmail.com
+Comment: NA
+You selected this USER-ID:
+    "prem kumar (NA) &lt;marzaanvan@gmail.com&gt;"
+
+~/$ Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? o
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+gpg: key 8B49243047552028 marked as ultimately trusted
+gpg: revocation certificate stored as '/home/ubuntu/.gnupg/openpgp-revocs.d/9900A9C62DE86CD2941774AD8B49243047552028.rev'
+public and secret key created and signed.
+
+pub   rsa4096 2020-04-05 [SC] [expires: 2021-01-30]
+      9900A9C62DE86CD2941774AD8B49243047552028
+uid                      prem kumar (NA) &lt;marzaanvan@gmail.com&gt;
+sub   rsa4096 2020-04-05 [E] [expires: 2021-01-30]
+
+</code></pre></div></div>
+
+<p>The system may require more entropy to generate the keypair, in a new shell session, install the <code class="highlighter-rouge">rng-utils</code> package:</p>
+
+<blockquote>
+  <p>sudo apt install rng-tools</p>
+</blockquote>
+
+<ul>
+  <li>Check and feed random data from an entropy source (e.g. hardware RNG device) to an entropy sink (e.g. kernel entropy pool) to provide the needed entropy for a secure keypair to be generated:</li>
+</ul>
+
+<blockquote>
+  <p>rngd -f -r /dev/urandom</p>
+</blockquote>
+
+<ul>
+  <li>Check the amount of entropy available on your Linode. The value should be somewhere near 3000 for keypair generation.</li>
+</ul>
+
+<blockquote>
+  <p>cat /proc/sys/kernel/random/entropy_avail</p>
+</blockquote>
+
+<ol>
+  <li>Verify the keys on your public keyring:</li>
+</ol>
+
+<blockquote>
+  <p>gpg2 –list-keys</p>
+</blockquote>
+
+<p>The example output contains two public keys:
+  <img src="/assets/gpg-keys.png" alt="keyring" /></p>
+
+<p>Each value in the list represents the following information:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Public key: pub
+
+2. Key size and type: 4096R
+
+3. Short key ID: A11C0F78
+
+4. Creation date: 2018-08-02
+
+5. Expiration date: [expires: 2018-09-01]
+
+6. User IDs: exampleName2 (example comment) &lt;user2@example.com&gt;
+
+7. Subkey: sub
+</code></pre></div></div>
+
+<h2 id="generate-a-revocation-certificate-">Generate a Revocation Certificate:-</h2>
+
+<p>A revocation certificate is useful if you forget your passphrase or if your private key is somehow compromised. It is used to notify others that the public key is no longer valid. Create the revocation certificate immediately after generating your public key.</p>
+
+<p>Generate a revocation certificate. Replace <code class="highlighter-rouge">user@example.com</code> with the email address associated with the public key:</p>
+
+<blockquote>
+  <p>gpg2 –output revoke.asc –gen-revoke user@example.com</p>
+</blockquote>
+
+<ul>
+  <li>
+    <p>A prompt will ask you to select a reason for the revocation and provide an optional description. The default reason is recommended</p>
+  </li>
+  <li>
+    <p>The revocation certificate will be saved to the current directory as a file named <code class="highlighter-rouge">revoke.asc</code>. Save the certificate to a safe location on a different system so that you can access it in case your key is compromised in the future.</p>
+  </li>
+</ul>
+
+<h2 id="exchange-public-keys">Exchange Public Keys</h2>
+<p>After Generating the keys , one needs to exchange the public keys in order to communicate securely. This can be done using two methods</p>
+<ol>
+  <li>Importing the recipient public key manually</li>
+  <li>Submitting the keys to the keyserver to be publically accessed any other client</li>
+</ol>
+
+<h2 id="export-your-public-key">Export Your Public Key</h2>
+
+<ol>
+  <li>Export the public key using following command.Replace <code class="highlighter-rouge">public-key.gpg</code> with your choice of name and <code class="highlighter-rouge">user@example.com</code> with email associated with the public key.This will save the key in the current directory itself.</li>
+</ol>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; gpg2 --armour --output public-key.gpg --export user@example.com
+</code></pre></div></div>
+
+<ol>
+  <li>
+    <p>Send the <code class="highlighter-rouge">public-key.gpg</code> file to the recipient in an email or copy and paste the contents of the <code class="highlighter-rouge">public-key.gpg</code> file.</p>
+  </li>
+  <li>
+    <p>The recipient should import the public key and validate it in order to use it to decrypt a message sent by you.</p>
+  </li>
+</ol>
+
+<h2 id="import-and-validate-a-public-key">Import and Validate a Public Key</h2>
+<p>One can add the recipient’s public key to one’s public keyring by importing it.The user public key must be first recieved using email or some other format, before it can be imported in the public ring</p>
+
+<ul>
+  <li>
+    <p>Once you’ve received the user’s public key and the <code class="highlighter-rouge">.gpg</code> file is saved to your local disk, import it to your public key ring</p>
+
+    <blockquote>
+      <p>gpg2 –import public-key.gpg</p>
+    </blockquote>
+  </li>
+  <li>
+    <p>Verify that the public key has been added to your public key ring</p>
+  </li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; gpg2 --list-keys
+</code></pre></div></div>
+
+<ul>
+  <li>Check the key’s fingerprint:
+     The output will resemble the following</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>![fingerprint](/assets/gpg-fingerprint.png)
+
+   Ask the owner of the public key to send you their public key’s fingerprint and verify that the fingerprint values match. If they match, you can be confident that the key you have added is a valid copy of the owner’s public key.
+
+  &gt; gpg2 --fingerprint marzaanvan@gmail.com
+
+
+*  When you have verified the public key’s fingerprint, sign the public key with your own key to officially validate it. Replace `user3@example3.com` with the associated email for the key you are validating:
+</code></pre></div></div>
+
+<p>Enter your passphrase when prompted.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; gpg2 --sign-key user3@example3.com
+
+
+*  View the public key’s signatures to verify that your signature has been added:
+</code></pre></div></div>
+
+<blockquote>
+  <p>gpg2 –check-sigs user3@example3.com</p>
+</blockquote>
+
+<p><img src="/assets/check-sigs.png" alt="validate-sigs" /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*  You can export the signature to the public key and then send the signed copy back to the owner of the public key to boost the key’s level of confidence for future users:
+</code></pre></div></div>
+
+<blockquote>
+  <p>gpg2 –output signed-key.gpg –export –armor user3@example3.com</p>
+</blockquote>
+
+<p>Send the signed key to the public key owner via email so they can import the signature to their GPG database</p>
+
+<h2 id="submit-your-public-key-to-a-key-server">Submit Your Public Key to a Key Server</h2>
+
+
+  </div><a class="u-url" href="/2020/02/29/Using-GPG-to-exchange-messages.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Grokking all things in the universe !</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Grokking all things in the universe !</li><li><a class="u-email" href="mailto:kumar877prem@gmail.com">kumar877prem@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/marzaanvan"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">marzaanvan</span></a></li><li><a href="https://www.twitter.com/kprem16"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">kprem16</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>This is an awesome description of my new site , which i&#39;m gonna change later as right now i&#39;m in testing MODE !!!</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
