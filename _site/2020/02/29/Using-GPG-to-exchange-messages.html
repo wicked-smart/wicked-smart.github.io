@@ -253,6 +253,7 @@ sub   rsa4096 2020-04-05 [E] [expires: 2021-01-30]
 
 <h2 id="exchange-public-keys">Exchange Public Keys</h2>
 <p>After Generating the keys , one needs to exchange the public keys in order to communicate securely. This can be done using two methods</p>
+
 <ol>
   <li>Importing the recipient public key manually</li>
   <li>Submitting the keys to the keyserver to be publically accessed any other client</li>
@@ -300,32 +301,35 @@ sub   rsa4096 2020-04-05 [E] [expires: 2021-01-30]
      The output will resemble the following</li>
 </ul>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>![fingerprint](/assets/gpg-fingerprint.png)
+<p><img src="/assets/gpg-fingerprint.png" alt="fingerprint" /></p>
 
-   Ask the owner of the public key to send you their public key’s fingerprint and verify that the fingerprint values match. If they match, you can be confident that the key you have added is a valid copy of the owner’s public key.
+<p>Ask the owner of the public key to send you their public key’s fingerprint and verify that the fingerprint values match. If they match, you can be confident that the key you have added is a valid copy of the owner’s public key.</p>
 
-  &gt; gpg2 --fingerprint marzaanvan@gmail.com
+<blockquote>
+  <p>gpg2 –fingerprint marzaanvan@gmail.com</p>
+</blockquote>
 
-
-*  When you have verified the public key’s fingerprint, sign the public key with your own key to officially validate it. Replace `user3@example3.com` with the associated email for the key you are validating:
-</code></pre></div></div>
+<p>When you have verified the public key’s fingerprint, sign the public key with your own key to officially validate it. Replace <code class="highlighter-rouge">user3@example3.com</code> with the associated email for the key you are validating:</p>
 
 <p>Enter your passphrase when prompted.</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; gpg2 --sign-key user3@example3.com
-
-
-*  View the public key’s signatures to verify that your signature has been added:
 </code></pre></div></div>
 
-<blockquote>
-  <p>gpg2 –check-sigs user3@example3.com</p>
-</blockquote>
+<ul>
+  <li>
+    <p>View the public key’s signatures to verify that your signature has been added:</p>
 
-<p><img src="/assets/check-sigs.png" alt="validate-sigs" /></p>
+    <blockquote>
+      <p>gpg2 –check-sigs user3@example3.com</p>
+    </blockquote>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*  You can export the signature to the public key and then send the signed copy back to the owner of the public key to boost the key’s level of confidence for future users:
-</code></pre></div></div>
+    <p><img src="/assets/check-sigs.png" alt="validate-sigs" /></p>
+  </li>
+  <li>
+    <p>You can export the signature to the public key and then send the signed copy back to the owner of the public key to boost the key’s level of confidence for future users:</p>
+  </li>
+</ul>
 
 <blockquote>
   <p>gpg2 –output signed-key.gpg –export –armor user3@example3.com</p>

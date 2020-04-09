@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-09T23:16:30+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Grokking all things in the universe !</title><subtitle>This is an awesome description of my new site , which i'm gonna change later as right now i'm in testing MODE !!!</subtitle><entry><title type="html">Code Snippets</title><link href="http://localhost:4000/2020/03/06/php-script-snippet.html" rel="alternate" type="text/html" title="Code Snippets" /><published>2020-03-06T00:00:00+05:30</published><updated>2020-03-06T00:00:00+05:30</updated><id>http://localhost:4000/2020/03/06/php-script-snippet</id><content type="html" xml:base="http://localhost:4000/2020/03/06/php-script-snippet.html">&lt;h1 id=&quot;php-script&quot;&gt;PHP Script&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-09T23:22:37+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Grokking all things in the universe !</title><subtitle>This is an awesome description of my new site , which i'm gonna change later as right now i'm in testing MODE !!!</subtitle><entry><title type="html">Code Snippets</title><link href="http://localhost:4000/2020/03/06/php-script-snippet.html" rel="alternate" type="text/html" title="Code Snippets" /><published>2020-03-06T00:00:00+05:30</published><updated>2020-03-06T00:00:00+05:30</updated><id>http://localhost:4000/2020/03/06/php-script-snippet</id><content type="html" xml:base="http://localhost:4000/2020/03/06/php-script-snippet.html">&lt;h1 id=&quot;php-script&quot;&gt;PHP Script&lt;/h1&gt;
 
 &lt;p&gt;&lt;strong&gt;permission.php&lt;/strong&gt;&lt;/p&gt;
 
@@ -231,6 +231,7 @@ sub   rsa4096 2020-04-05 [E] [expires: 2021-01-30]
 
 &lt;h2 id=&quot;exchange-public-keys&quot;&gt;Exchange Public Keys&lt;/h2&gt;
 &lt;p&gt;After Generating the keys , one needs to exchange the public keys in order to communicate securely. This can be done using two methods&lt;/p&gt;
+
 &lt;ol&gt;
   &lt;li&gt;Importing the recipient public key manually&lt;/li&gt;
   &lt;li&gt;Submitting the keys to the keyserver to be publically accessed any other client&lt;/li&gt;
@@ -278,32 +279,35 @@ sub   rsa4096 2020-04-05 [E] [expires: 2021-01-30]
      The output will resemble the following&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;![fingerprint](/assets/gpg-fingerprint.png)
+&lt;p&gt;&lt;img src=&quot;/assets/gpg-fingerprint.png&quot; alt=&quot;fingerprint&quot; /&gt;&lt;/p&gt;
 
-   Ask the owner of the public key to send you their public key’s fingerprint and verify that the fingerprint values match. If they match, you can be confident that the key you have added is a valid copy of the owner’s public key.
+&lt;p&gt;Ask the owner of the public key to send you their public key’s fingerprint and verify that the fingerprint values match. If they match, you can be confident that the key you have added is a valid copy of the owner’s public key.&lt;/p&gt;
 
-  &amp;gt; gpg2 --fingerprint marzaanvan@gmail.com
+&lt;blockquote&gt;
+  &lt;p&gt;gpg2 –fingerprint marzaanvan@gmail.com&lt;/p&gt;
+&lt;/blockquote&gt;
 
-
-*  When you have verified the public key’s fingerprint, sign the public key with your own key to officially validate it. Replace `user3@example3.com` with the associated email for the key you are validating:
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;When you have verified the public key’s fingerprint, sign the public key with your own key to officially validate it. Replace &lt;code class=&quot;highlighter-rouge&quot;&gt;user3@example3.com&lt;/code&gt; with the associated email for the key you are validating:&lt;/p&gt;
 
 &lt;p&gt;Enter your passphrase when prompted.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; gpg2 --sign-key user3@example3.com
-
-
-*  View the public key’s signatures to verify that your signature has been added:
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;gpg2 –check-sigs user3@example3.com&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;View the public key’s signatures to verify that your signature has been added:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/check-sigs.png&quot; alt=&quot;validate-sigs&quot; /&gt;&lt;/p&gt;
+    &lt;blockquote&gt;
+      &lt;p&gt;gpg2 –check-sigs user3@example3.com&lt;/p&gt;
+    &lt;/blockquote&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;*  You can export the signature to the public key and then send the signed copy back to the owner of the public key to boost the key’s level of confidence for future users:
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+    &lt;p&gt;&lt;img src=&quot;/assets/check-sigs.png&quot; alt=&quot;validate-sigs&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;You can export the signature to the public key and then send the signed copy back to the owner of the public key to boost the key’s level of confidence for future users:&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;gpg2 –output signed-key.gpg –export –armor user3@example3.com&lt;/p&gt;

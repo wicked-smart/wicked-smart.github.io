@@ -170,6 +170,7 @@ sub   rsa4096 2020-04-05 [E] [expires: 2021-01-30]
 
 ## Exchange Public Keys
   After Generating the keys , one needs to exchange the public keys in order to communicate securely. This can be done using two methods
+
   1. Importing the recipient public key manually
   2. Submitting the keys to the keyserver to be publically accessed any other client
 
@@ -198,28 +199,28 @@ One can add the recipient's public key to one's public keyring by importing it.T
   *  Check the key’s fingerprint:
           The output will resemble the following
 
-    ![fingerprint](/assets/gpg-fingerprint.png)
+![fingerprint](/assets/gpg-fingerprint.png)
 
-       Ask the owner of the public key to send you their public key’s fingerprint and verify that the fingerprint values match. If they match, you can be confident that the key you have added is a valid copy of the owner’s public key.
+Ask the owner of the public key to send you their public key’s fingerprint and verify that the fingerprint values match. If they match, you can be confident that the key you have added is a valid copy of the owner’s public key.
 
-      > gpg2 --fingerprint marzaanvan@gmail.com
+ > gpg2 --fingerprint marzaanvan@gmail.com
 
 
-    *  When you have verified the public key’s fingerprint, sign the public key with your own key to officially validate it. Replace `user3@example3.com` with the associated email for the key you are validating:
+ When you have verified the public key’s fingerprint, sign the public key with your own key to officially validate it. Replace `user3@example3.com` with the associated email for the key you are validating:
 
 Enter your passphrase when prompted.
 
     > gpg2 --sign-key user3@example3.com
 
 
-    *  View the public key’s signatures to verify that your signature has been added:
+*  View the public key’s signatures to verify that your signature has been added:
 
    > gpg2 --check-sigs user3@example3.com
 
 
    ![validate-sigs](/assets/check-sigs.png)
 
-    *  You can export the signature to the public key and then send the signed copy back to the owner of the public key to boost the key’s level of confidence for future users:
+*  You can export the signature to the public key and then send the signed copy back to the owner of the public key to boost the key’s level of confidence for future users:
 
   > gpg2 --output signed-key.gpg --export --armor user3@example3.com
 
