@@ -19,7 +19,7 @@ Date: 2020-23-02 06:41  PM +05:30
   * GNU Privacy Gaurd (GnuPG), Also Known as GPG, is a tool for secure communication  used to exchange encrypted files and messages between client machines using Public-Key Cryptography Methods.
 
 ## Uses of gpg
-  1. **Checking file Integrity**:-
+  * **Checking file Integrity**:-
    RStudio Signed Builds
     Official RStudio builds for Linux-based operating systems may be signed with a GnuPG key.
     **gpg2** can be used to validate the binary ourselves to
@@ -42,7 +42,7 @@ Date: 2020-23-02 06:41  PM +05:30
         ![key-import-image](/assets/Validate-RStudio-Code-Signing.png)
 
 
-  2. **Sending Encrypted Messages and Files** * Encrypt Document to be sent
+  * **Sending Encrypted Messages and Files** * Encrypt Document to be sent
 
 
      > gpg2 --output encrypted-doc.gpg --encrypt --sign --armor --recipient tomcrse61@gmail.com --recipient kumar877prem@gmail.com doc-to-encrypt.txt
@@ -51,6 +51,7 @@ Date: 2020-23-02 06:41  PM +05:30
 
   > gpg2 --output decrypted-doc --decrypt doc-to-decrypt.gpg
 
+  * **Using gpg-key for ssh authentication**
 
 
 
@@ -132,7 +133,7 @@ sub   rsa4096 2020-04-05 [E] [expires: 2021-01-30]
 
   > cat /proc/sys/kernel/random/entropy_avail
 
-3. Verify the keys on your public keyring:
+- Verify the keys on your public keyring:
 
   > gpg2 --list-keys
 
@@ -141,19 +142,19 @@ sub   rsa4096 2020-04-05 [E] [expires: 2021-01-30]
 
   Each value in the list represents the following information:
 
-    1. Public key: pub
+    1. Public key: `pub`
 
-    2. Key size and type: 4096R
+    2. Key size and type: `4096R`
 
-    3. Short key ID: A11C0F78
+    3. Short key ID: `A11C0F78`
 
-    4. Creation date: 2018-08-02
+    4. Creation date: `2018-08-02`
 
-    5. Expiration date: [expires: 2018-09-01]
+    5. Expiration date: `[expires: 2018-09-01]`
 
-    6. User IDs: exampleName2 (example comment) <user2@example.com>
+    6. User IDs: `exampleName2 (example comment) <user2@example.com>`
 
-    7. Subkey: sub
+    7. Subkey: `sub`
 
 
 ## Generate a Revocation Certificate:-
@@ -176,14 +177,14 @@ sub   rsa4096 2020-04-05 [E] [expires: 2021-01-30]
 
 ## Export Your Public Key
 
-  1.  Export the public key using following command.Replace `public-key.gpg` with your choice of name and `user@example.com` with email associated with the public key.This will save the key in the current directory itself.
+  *  Export the public key using following command.Replace `public-key.gpg` with your choice of name and `user@example.com` with email associated with the public key.This will save the key in the current directory itself.
 
     > gpg2 --armour --output public-key.gpg --export user@example.com
 
 
-  2. Send the `public-key.gpg` file to the recipient in an email or copy and paste the contents of the `public-key.gpg` file.
+  * Send the `public-key.gpg` file to the recipient in an email or copy and paste the contents of the `public-key.gpg` file.
 
-  3. The recipient should import the public key and validate it in order to use it to decrypt a message sent by you.
+  * The recipient should import the public key and validate it in order to use it to decrypt a message sent by you.
 
 ## Import and Validate a Public Key
 One can add the recipient's public key to one's public keyring by importing it.The user public key must be first recieved using email or some other format, before it can be imported in the public ring
@@ -228,4 +229,30 @@ Enter your passphrase when prompted.
 
 
 ## Submit Your Public Key to a Key Server
+
+Information about default keyserver is present in `~/.gnupg/gpg.cnf` file (most likely set as `hkp://keys.gnupg.net`), but any other source can be listed using `--keyserver` flag of gpg2 option. Following are the steps required to Submit a Public Key to a Key-Server
+
+  * Find the long key ID for the public key you would like to send to the key server:
+
+  >   gpg2 --keyid-format long --list-keys user@example.com
+
+  Where , `user@example.com` is to be replaced with associated email-id of the key.
+
+  One Will see Output similar to the below picture:
+
+  ![long-key](/assets/long-key-crop.png)
+
+  The long key ID is the value after the key size `rsa4096` in the `pub` row. In the example the long key ID is `D536B962F4610A01`:
+
+* To send your public key to the default key server use the following command and replace `keyid` with your public key’s long key ID:
+
+  > gpg2 --keyserver server-name  --send-keys keyid
+
+* Anyone can request your public key from the key server with the following command:
+
+  > gpg2 --keyserver server-name  --recv-keys keyid
+
+  The public key will be added to the user’s trust database using `trustdb.gpg` file.
+
+## Encrypt a Message
 
