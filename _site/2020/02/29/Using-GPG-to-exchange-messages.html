@@ -50,15 +50,15 @@
   <li><a href="#Uses of gpg">Where and how gpg2 is used?</a></li>
   <li><a href="#Create GPG2 keys">Create GPG2 keys</a></li>
   <li><a href="#Generate a Revocation Certificate">Generate a Revocation Certificate</a></li>
-  <li>Exchange Public Keys
+  <li><a href="#Exchange Public Keys">Exchange Public Keys</a>
     <ul>
-      <li>Export Your Public Keys</li>
-      <li>Import and Validate a Public Key</li>
-      <li>Submit Your Public Key to a Key Server</li>
+      <li><a href="#Export Your Public Keys">Export Your Public Keys</a></li>
+      <li><a href="#Import and Validate a Public Key">Import and Validate a Public Key</a></li>
+      <li><a href="#Submit Your Public Key to a Key Server">Submit Your Public Key to a Key Server</a></li>
     </ul>
   </li>
-  <li>Encrypt a Message</li>
-  <li>Decrypt a Message</li>
+  <li><a href="#Encrypt a Message">Encrypt a Message</a></li>
+  <li><a href="#Decrypt a Message">Decrypt a Message</a></li>
 </ul>
 
 <h2 id="what-is-gpg2">What is gpg2?</h2>
@@ -89,10 +89,13 @@ Official RStudio builds for Linux-based operating systems may be signed with a G
     <p>Step 2: Validating Build Signatures:-</p>
 
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;    dpkg-sig --verify rstudio-download-1.2.3.deb
-
-![key-import-image](/assets/Validate-RStudio-Code-Signing.png)
 </code></pre></div>    </div>
   </li>
+</ul>
+
+<p><img src="/assets/gpg2/Validate-RStudio-Code-Signing.png" alt="key-import-image" /></p>
+
+<ul>
   <li>
     <p><strong>Sending Encrypted Messages and Files</strong> * Encrypt Document to be sent</p>
 
@@ -217,7 +220,7 @@ sub   rsa4096 2020-04-05 [E] [expires: 2021-01-30]
     </blockquote>
 
     <p>The example output contains two public keys:
-<img src="/assets/gpg-keys.png" alt="keyring" /></p>
+<img src="/assets/gpg2/gpg-keys.png" alt="keyring" /></p>
 
     <p>Each value in the list represents the following information:</p>
 
@@ -316,7 +319,7 @@ sub   rsa4096 2020-04-05 [E] [expires: 2021-01-30]
      The output will resemble the following</li>
 </ul>
 
-<p><img src="/assets/gpg-fingerprint.png" alt="fingerprint" /></p>
+<p><img src="/assets/gpg2/gpg-fingerprint.png" alt="fingerprint" /></p>
 
 <p>Ask the owner of the public key to send you their public key’s fingerprint and verify that the fingerprint values match. If they match, you can be confident that the key you have added is a valid copy of the owner’s public key.</p>
 
@@ -339,7 +342,7 @@ sub   rsa4096 2020-04-05 [E] [expires: 2021-01-30]
       <p>gpg2 –check-sigs user3@example3.com</p>
     </blockquote>
 
-    <p><img src="/assets/check-sigs.png" alt="validate-sigs" /></p>
+    <p><img src="/assets/gpg2/check-sigs.png" alt="validate-sigs" /></p>
   </li>
   <li>
     <p>You can export the signature to the public key and then send the signed copy back to the owner of the public key to boost the key’s level of confidence for future users:</p>
@@ -368,7 +371,7 @@ sub   rsa4096 2020-04-05 [E] [expires: 2021-01-30]
 
 <p>One Will see Output similar to the below picture:</p>
 
-<p><img src="/assets/long-key-crop.png" alt="long-key" /></p>
+<p><img src="/assets/gpg2/long-key-crop.png" alt="long-key" /></p>
 
 <p>The long key ID is the value after the key size <code class="highlighter-rouge">rsa4096</code> in the <code class="highlighter-rouge">pub</code> row. In the example the long key ID is <code class="highlighter-rouge">D536B962F4610A01</code>:</p>
 
@@ -391,7 +394,37 @@ sub   rsa4096 2020-04-05 [E] [expires: 2021-01-30]
   </li>
 </ul>
 
-<h2 id="encrypt-a-message">Encrypt a Message</h2>
+<h2 id="exchanging-messages-using-gpg2">Exchanging Messages using gpg2</h2>
+
+<p>To Demonstrate this we’ll take a text file <code class="highlighter-rouge">lorem-ipsum.txt</code> , encrypt it using <code class="highlighter-rouge">tomcrse61@gmail.com</code>’s gpg-key , send to my cs50-ide and decrypt both <code class="highlighter-rouge">.gpg</code>  files  to show the text content. We’ll attach the screenshots for every step.</p>
+
+<h2 id="encrypt-a-messagefile">Encrypt a Message/File</h2>
+
+<p>First we import <code class="highlighter-rouge">tomcrse61@gmail.com</code>’s public key , validate it by cross-checking their fingerprint and finally encrypt using their public-key , which finally will be decrypted using only thier own private key.</p>
+
+<p>To Encrypt <code class="highlighter-rouge">lorem-ipsum.txt</code> :</p>
+
+<blockquote>
+  <p>gpg2 –output lorem-ipsum.gpg –encrypt –sign –armor –recipient tomcrse61@gmail.com -recipient kumar877prem@gmail.com lorem-ipsum.txt</p>
+</blockquote>
+
+<p>This Will Produce <code class="highlighter-rouge">lorem-ipsum.gpg</code> as the encrypted file.</p>
+
+<p>The extension <code class="highlighter-rouge">.gpg</code> is used for encrypted/binary data and <code class="highlighter-rouge">.asc</code> or <code class="highlighter-rouge">.sig</code> is used for detached or clearsign signatures. Including the <code class="highlighter-rouge">--armor</code> flag will encrypt the message in plain text.</p>
+
+<h2 id="decrypt-a-messagefile">Decrypt a Message/File</h2>
+
+<p>A message will need to have been encrypted with your public key for you to able to decrypt it with your private key. Ensure that anyone that will be sending you an encrypted message has a copy of your public key.</p>
+
+<p>To decrypt a message:</p>
+
+<blockquote>
+  <p>gpg –output lorem-ipsum.txt  –decrypt lorem-ipsum.gpg</p>
+</blockquote>
+
+<p>Decrypted file contents are same as of the original text file</p>
+
+<p><img src="/assets/gpg2/lorem-ipsum.png" alt="lorem-ipsum.txt" /></p>
 
 
   </div><a class="u-url" href="/2020/02/29/Using-GPG-to-exchange-messages.html" hidden></a>

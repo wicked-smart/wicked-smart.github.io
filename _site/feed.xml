@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-10T19:02:49+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Grokking all things in the universe !</title><subtitle>This is an awesome description of my new site , which i'm gonna change later as right now i'm in testing MODE !!!</subtitle><entry><title type="html">Code Snippets</title><link href="http://localhost:4000/2020/03/06/php-script-snippet.html" rel="alternate" type="text/html" title="Code Snippets" /><published>2020-03-06T00:00:00+05:30</published><updated>2020-03-06T00:00:00+05:30</updated><id>http://localhost:4000/2020/03/06/php-script-snippet</id><content type="html" xml:base="http://localhost:4000/2020/03/06/php-script-snippet.html">&lt;h1 id=&quot;php-script&quot;&gt;PHP Script&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-11T18:05:57+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Grokking all things in the universe !</title><subtitle>This is an awesome description of my new site , which i'm gonna change later as right now i'm in testing MODE !!!</subtitle><entry><title type="html">Code Snippets</title><link href="http://localhost:4000/2020/03/06/php-script-snippet.html" rel="alternate" type="text/html" title="Code Snippets" /><published>2020-03-06T00:00:00+05:30</published><updated>2020-03-06T00:00:00+05:30</updated><id>http://localhost:4000/2020/03/06/php-script-snippet</id><content type="html" xml:base="http://localhost:4000/2020/03/06/php-script-snippet.html">&lt;h1 id=&quot;php-script&quot;&gt;PHP Script&lt;/h1&gt;
 
 &lt;p&gt;&lt;strong&gt;permission.php&lt;/strong&gt;&lt;/p&gt;
 
@@ -28,15 +28,15 @@
   &lt;li&gt;&lt;a href=&quot;#Uses of gpg&quot;&gt;Where and how gpg2 is used?&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#Create GPG2 keys&quot;&gt;Create GPG2 keys&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#Generate a Revocation Certificate&quot;&gt;Generate a Revocation Certificate&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Exchange Public Keys
+  &lt;li&gt;&lt;a href=&quot;#Exchange Public Keys&quot;&gt;Exchange Public Keys&lt;/a&gt;
     &lt;ul&gt;
-      &lt;li&gt;Export Your Public Keys&lt;/li&gt;
-      &lt;li&gt;Import and Validate a Public Key&lt;/li&gt;
-      &lt;li&gt;Submit Your Public Key to a Key Server&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#Export Your Public Keys&quot;&gt;Export Your Public Keys&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#Import and Validate a Public Key&quot;&gt;Import and Validate a Public Key&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#Submit Your Public Key to a Key Server&quot;&gt;Submit Your Public Key to a Key Server&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Encrypt a Message&lt;/li&gt;
-  &lt;li&gt;Decrypt a Message&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#Encrypt a Message&quot;&gt;Encrypt a Message&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#Decrypt a Message&quot;&gt;Decrypt a Message&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;what-is-gpg2&quot;&gt;What is gpg2?&lt;/h2&gt;
@@ -67,10 +67,13 @@ Official RStudio builds for Linux-based operating systems may be signed with a G
     &lt;p&gt;Step 2: Validating Build Signatures:-&lt;/p&gt;
 
     &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;    dpkg-sig --verify rstudio-download-1.2.3.deb
-
-![key-import-image](/assets/Validate-RStudio-Code-Signing.png)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/gpg2/Validate-RStudio-Code-Signing.png&quot; alt=&quot;key-import-image&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;strong&gt;Sending Encrypted Messages and Files&lt;/strong&gt; * Encrypt Document to be sent&lt;/p&gt;
 
@@ -195,7 +198,7 @@ sub   rsa4096 2020-04-05 [E] [expires: 2021-01-30]
     &lt;/blockquote&gt;
 
     &lt;p&gt;The example output contains two public keys:
-&lt;img src=&quot;/assets/gpg-keys.png&quot; alt=&quot;keyring&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/assets/gpg2/gpg-keys.png&quot; alt=&quot;keyring&quot; /&gt;&lt;/p&gt;
 
     &lt;p&gt;Each value in the list represents the following information:&lt;/p&gt;
 
@@ -294,7 +297,7 @@ sub   rsa4096 2020-04-05 [E] [expires: 2021-01-30]
      The output will resemble the following&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/gpg-fingerprint.png&quot; alt=&quot;fingerprint&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/gpg2/gpg-fingerprint.png&quot; alt=&quot;fingerprint&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Ask the owner of the public key to send you their public key’s fingerprint and verify that the fingerprint values match. If they match, you can be confident that the key you have added is a valid copy of the owner’s public key.&lt;/p&gt;
 
@@ -317,7 +320,7 @@ sub   rsa4096 2020-04-05 [E] [expires: 2021-01-30]
       &lt;p&gt;gpg2 –check-sigs user3@example3.com&lt;/p&gt;
     &lt;/blockquote&gt;
 
-    &lt;p&gt;&lt;img src=&quot;/assets/check-sigs.png&quot; alt=&quot;validate-sigs&quot; /&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;img src=&quot;/assets/gpg2/check-sigs.png&quot; alt=&quot;validate-sigs&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;You can export the signature to the public key and then send the signed copy back to the owner of the public key to boost the key’s level of confidence for future users:&lt;/p&gt;
@@ -346,7 +349,7 @@ sub   rsa4096 2020-04-05 [E] [expires: 2021-01-30]
 
 &lt;p&gt;One Will see Output similar to the below picture:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/long-key-crop.png&quot; alt=&quot;long-key&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/gpg2/long-key-crop.png&quot; alt=&quot;long-key&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The long key ID is the value after the key size &lt;code class=&quot;highlighter-rouge&quot;&gt;rsa4096&lt;/code&gt; in the &lt;code class=&quot;highlighter-rouge&quot;&gt;pub&lt;/code&gt; row. In the example the long key ID is &lt;code class=&quot;highlighter-rouge&quot;&gt;D536B962F4610A01&lt;/code&gt;:&lt;/p&gt;
 
@@ -369,4 +372,34 @@ sub   rsa4096 2020-04-05 [E] [expires: 2021-01-30]
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;encrypt-a-message&quot;&gt;Encrypt a Message&lt;/h2&gt;</content><author><name></name></author><summary type="html">What is gpg2 ? Where and how gpg2 is used? Create GPG2 keys Generate a Revocation Certificate Exchange Public Keys Export Your Public Keys Import and Validate a Public Key Submit Your Public Key to a Key Server Encrypt a Message Decrypt a Message</summary></entry></feed>
+&lt;h2 id=&quot;exchanging-messages-using-gpg2&quot;&gt;Exchanging Messages using gpg2&lt;/h2&gt;
+
+&lt;p&gt;To Demonstrate this we’ll take a text file &lt;code class=&quot;highlighter-rouge&quot;&gt;lorem-ipsum.txt&lt;/code&gt; , encrypt it using &lt;code class=&quot;highlighter-rouge&quot;&gt;tomcrse61@gmail.com&lt;/code&gt;’s gpg-key , send to my cs50-ide and decrypt both &lt;code class=&quot;highlighter-rouge&quot;&gt;.gpg&lt;/code&gt;  files  to show the text content. We’ll attach the screenshots for every step.&lt;/p&gt;
+
+&lt;h2 id=&quot;encrypt-a-messagefile&quot;&gt;Encrypt a Message/File&lt;/h2&gt;
+
+&lt;p&gt;First we import &lt;code class=&quot;highlighter-rouge&quot;&gt;tomcrse61@gmail.com&lt;/code&gt;’s public key , validate it by cross-checking their fingerprint and finally encrypt using their public-key , which finally will be decrypted using only thier own private key.&lt;/p&gt;
+
+&lt;p&gt;To Encrypt &lt;code class=&quot;highlighter-rouge&quot;&gt;lorem-ipsum.txt&lt;/code&gt; :&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;gpg2 –output lorem-ipsum.gpg –encrypt –sign –armor –recipient tomcrse61@gmail.com -recipient kumar877prem@gmail.com lorem-ipsum.txt&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This Will Produce &lt;code class=&quot;highlighter-rouge&quot;&gt;lorem-ipsum.gpg&lt;/code&gt; as the encrypted file.&lt;/p&gt;
+
+&lt;p&gt;The extension &lt;code class=&quot;highlighter-rouge&quot;&gt;.gpg&lt;/code&gt; is used for encrypted/binary data and &lt;code class=&quot;highlighter-rouge&quot;&gt;.asc&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;.sig&lt;/code&gt; is used for detached or clearsign signatures. Including the &lt;code class=&quot;highlighter-rouge&quot;&gt;--armor&lt;/code&gt; flag will encrypt the message in plain text.&lt;/p&gt;
+
+&lt;h2 id=&quot;decrypt-a-messagefile&quot;&gt;Decrypt a Message/File&lt;/h2&gt;
+
+&lt;p&gt;A message will need to have been encrypted with your public key for you to able to decrypt it with your private key. Ensure that anyone that will be sending you an encrypted message has a copy of your public key.&lt;/p&gt;
+
+&lt;p&gt;To decrypt a message:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;gpg –output lorem-ipsum.txt  –decrypt lorem-ipsum.gpg&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Decrypted file contents are same as of the original text file&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/gpg2/lorem-ipsum.png&quot; alt=&quot;lorem-ipsum.txt&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">What is gpg2 ? Where and how gpg2 is used? Create GPG2 keys Generate a Revocation Certificate Exchange Public Keys Export Your Public Keys Import and Validate a Public Key Submit Your Public Key to a Key Server Encrypt a Message Decrypt a Message</summary></entry></feed>

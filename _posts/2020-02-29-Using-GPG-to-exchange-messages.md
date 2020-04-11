@@ -8,12 +8,12 @@ Date: 2020-23-02 06:41  PM +05:30
 * [Where and how gpg2 is used?](#Uses of gpg)
 * [Create GPG2 keys](#Create GPG2 keys)
 * [Generate a Revocation Certificate](#Generate a Revocation Certificate)
-* Exchange Public Keys
-  * Export Your Public Keys
-  * Import and Validate a Public Key
-  * Submit Your Public Key to a Key Server
-* Encrypt a Message
-* Decrypt a Message
+* [Exchange Public Keys](#Exchange Public Keys)
+  * [Export Your Public Keys](#Export Your Public Keys)
+  * [Import and Validate a Public Key](#Import and Validate a Public Key)
+  * [Submit Your Public Key to a Key Server](#Submit Your Public Key to a Key Server)
+* [Encrypt a Message](#Encrypt a Message)
+* [Decrypt a Message](#Decrypt a Message)
 
 ## What is gpg2?
   * GNU Privacy Gaurd (GnuPG), Also Known as GPG, is a tool for secure communication  used to exchange encrypted files and messages between client machines using Public-Key Cryptography Methods.
@@ -39,7 +39,7 @@ Date: 2020-23-02 06:41  PM +05:30
 
         >    dpkg-sig --verify rstudio-download-1.2.3.deb
 
-        ![key-import-image](/assets/Validate-RStudio-Code-Signing.png)
+  ![key-import-image](/assets/gpg2/Validate-RStudio-Code-Signing.png)
 
 
   * **Sending Encrypted Messages and Files** * Encrypt Document to be sent
@@ -138,7 +138,7 @@ sub   rsa4096 2020-04-05 [E] [expires: 2021-01-30]
   > gpg2 --list-keys
 
   The example output contains two public keys:
-  ![keyring](/assets/gpg-keys.png)
+  ![keyring](/assets/gpg2/gpg-keys.png)
 
   Each value in the list represents the following information:
 
@@ -200,7 +200,7 @@ One can add the recipient's public key to one's public keyring by importing it.T
   *  Check the key’s fingerprint:
           The output will resemble the following
 
-![fingerprint](/assets/gpg-fingerprint.png)
+![fingerprint](/assets/gpg2/gpg-fingerprint.png)
 
 Ask the owner of the public key to send you their public key’s fingerprint and verify that the fingerprint values match. If they match, you can be confident that the key you have added is a valid copy of the owner’s public key.
 
@@ -219,7 +219,7 @@ Enter your passphrase when prompted.
    > gpg2 --check-sigs user3@example3.com
 
 
-   ![validate-sigs](/assets/check-sigs.png)
+   ![validate-sigs](/assets/gpg2/check-sigs.png)
 
 *  You can export the signature to the public key and then send the signed copy back to the owner of the public key to boost the key’s level of confidence for future users:
 
@@ -240,7 +240,7 @@ Information about default keyserver is present in `~/.gnupg/gpg.cnf` file (most 
 
   One Will see Output similar to the below picture:
 
-  ![long-key](/assets/long-key-crop.png)
+  ![long-key](/assets/gpg2/long-key-crop.png)
 
   The long key ID is the value after the key size `rsa4096` in the `pub` row. In the example the long key ID is `D536B962F4610A01`:
 
@@ -254,5 +254,39 @@ Information about default keyserver is present in `~/.gnupg/gpg.cnf` file (most 
 
   The public key will be added to the user’s trust database using `trustdb.gpg` file.
 
-## Encrypt a Message
+
+## Exchanging Messages using gpg2
+
+To Demonstrate this we'll take a text file `lorem-ipsum.txt` , encrypt it using `tomcrse61@gmail.com`'s gpg-key , send to my cs50-ide and decrypt both `.gpg`  files  to show the text content. We'll attach the screenshots for every step.
+
+## Encrypt a Message/File
+
+First we import `tomcrse61@gmail.com`'s public key , validate it by cross-checking their fingerprint and finally encrypt using their public-key , which finally will be decrypted using only thier own private key.
+
+To Encrypt `lorem-ipsum.txt` :
+
+  > gpg2 --output lorem-ipsum.gpg --encrypt --sign --armor --recipient tomcrse61@gmail.com -recipient kumar877prem@gmail.com lorem-ipsum.txt
+
+This Will Produce `lorem-ipsum.gpg` as the encrypted file.
+
+The extension `.gpg` is used for encrypted/binary data and `.asc` or `.sig` is used for detached or clearsign signatures. Including the `--armor` flag will encrypt the message in plain text.
+
+## Decrypt a Message/File
+
+
+A message will need to have been encrypted with your public key for you to able to decrypt it with your private key. Ensure that anyone that will be sending you an encrypted message has a copy of your public key.
+
+To decrypt a message:
+
+  > gpg --output lorem-ipsum.txt  --decrypt lorem-ipsum.gpg
+
+  Decrypted file contents are same as of the original text file
+
+  ![lorem-ipsum.txt](/assets/gpg2/lorem-ipsum.png)
+
+
+
+
+
+
 
