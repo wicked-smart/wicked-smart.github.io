@@ -286,11 +286,6 @@ To decrypt a message:
   ![lorem-ipsum.txt](/assets/gpg2/lorem-ipsum.png)
 
 
-I have more [^1] and [^2] to say up here
-
-[^1]: To say down here
-[^2]: To say down here, again
-
 
 
 

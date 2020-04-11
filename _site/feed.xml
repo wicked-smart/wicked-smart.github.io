@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-11T18:13:36+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Grokking all things in the universe !</title><subtitle>This is an awesome description of my new site , which i'm gonna change later as right now i'm in testing MODE !!!</subtitle><entry><title type="html">Code Snippets</title><link href="http://localhost:4000/2020/03/06/php-script-snippet.html" rel="alternate" type="text/html" title="Code Snippets" /><published>2020-03-06T00:00:00+05:30</published><updated>2020-03-06T00:00:00+05:30</updated><id>http://localhost:4000/2020/03/06/php-script-snippet</id><content type="html" xml:base="http://localhost:4000/2020/03/06/php-script-snippet.html">&lt;h1 id=&quot;php-script&quot;&gt;PHP Script&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-11T18:19:26+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Grokking all things in the universe !</title><subtitle>This is an awesome description of my new site , which i'm gonna change later as right now i'm in testing MODE !!!</subtitle><entry><title type="html">Code Snippets</title><link href="http://localhost:4000/2020/03/06/php-script-snippet.html" rel="alternate" type="text/html" title="Code Snippets" /><published>2020-03-06T00:00:00+05:30</published><updated>2020-03-06T00:00:00+05:30</updated><id>http://localhost:4000/2020/03/06/php-script-snippet</id><content type="html" xml:base="http://localhost:4000/2020/03/06/php-script-snippet.html">&lt;h1 id=&quot;php-script&quot;&gt;PHP Script&lt;/h1&gt;
 
 &lt;p&gt;&lt;strong&gt;permission.php&lt;/strong&gt;&lt;/p&gt;
 
@@ -403,17 +403,4 @@ sub   rsa4096 2020-04-05 [E] [expires: 2021-01-30]
 
 &lt;p&gt;Decrypted file contents are same as of the original text file&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/gpg2/lorem-ipsum.png&quot; alt=&quot;lorem-ipsum.txt&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I have more &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; and &lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; to say up here&lt;/p&gt;
-
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;To say down here &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:2&quot;&gt;
-      &lt;p&gt;To say down here, again &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;</content><author><name></name></author><summary type="html">What is gpg2 ? Where and how gpg2 is used? Create GPG2 keys Generate a Revocation Certificate Exchange Public Keys Export Your Public Keys Import and Validate a Public Key Submit Your Public Key to a Key Server Encrypt a Message Decrypt a Message</summary></entry></feed>
+&lt;p&gt;&lt;img src=&quot;/assets/gpg2/lorem-ipsum.png&quot; alt=&quot;lorem-ipsum.txt&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">What is gpg2 ? Where and how gpg2 is used? Create GPG2 keys Generate a Revocation Certificate Exchange Public Keys Export Your Public Keys Import and Validate a Public Key Submit Your Public Key to a Key Server Encrypt a Message Decrypt a Message</summary></entry></feed>
