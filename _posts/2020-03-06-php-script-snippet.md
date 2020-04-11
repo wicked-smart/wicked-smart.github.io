@@ -10,7 +10,8 @@ Date: 2020-23-02 06:41  PM +05:30
 
   > php script to configure file and folder permissions of website at one go rather than manually doing chmod's to every file extension
 
-  ```
+  ```php
+
   <?php
   $dir = dirname( __FILE__ );
   $extensions_to_chmod_644 = array(

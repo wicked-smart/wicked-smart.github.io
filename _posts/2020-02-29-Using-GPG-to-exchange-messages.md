@@ -15,6 +15,7 @@ Date: 2020-23-02 06:41  PM +05:30
 * [Encrypt a Message](#Encrypt a Message)
 * [Decrypt a Message](#Decrypt a Message)
 
+
 ## What is gpg2?
   * GNU Privacy Gaurd (GnuPG), Also Known as GPG, is a tool for secure communication  used to exchange encrypted files and messages between client machines using Public-Key Cryptography Methods.
 
@@ -284,6 +285,11 @@ To decrypt a message:
 
   ![lorem-ipsum.txt](/assets/gpg2/lorem-ipsum.png)
 
+
+I have more [^1] and [^2] to say up here
+
+[^1]: To say down here
+[^2]: To say down here, again
 
 
 

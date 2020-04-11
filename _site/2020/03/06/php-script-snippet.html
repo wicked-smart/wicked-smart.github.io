@@ -53,22 +53,23 @@
   <p>php script to configure file and folder permissions of website at one go rather than manually doing chmod’s to every file extension</p>
 </blockquote>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;?php
-  $dir = dirname( __FILE__ );
-  $extensions_to_chmod_644 = array(
-  "jpg","gif","png","ico","css","md","txt","html","htm","xml","js","csv","json","htaccess");
-  $extension_separator = "\|";
-  $command_to_chmod_644 = 'find "' . $dir . '" -type f -iregex ".*\.\(';
-  foreach( $extensions_to_chmod_644 as $ext ) {
-      $command_to_chmod_644 .= $ext . $extension_separator;
-  }
-  $command_to_chmod_644 =
-  rtrim($command_to_chmod_644,$extension_separator);
-  $command_to_chmod_644 .= '\)$" -print0 | xargs -0 chmod 644'. PHP_EOL;
-  shell_exec($command_to_chmod_644);
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+  <span class="cp">&lt;?php</span>
+  <span class="nv">$dir</span> <span class="o">=</span> <span class="nb">dirname</span><span class="p">(</span> <span class="k">__FILE__</span> <span class="p">);</span>
+  <span class="nv">$extensions_to_chmod_644</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+  <span class="s2">"jpg"</span><span class="p">,</span><span class="s2">"gif"</span><span class="p">,</span><span class="s2">"png"</span><span class="p">,</span><span class="s2">"ico"</span><span class="p">,</span><span class="s2">"css"</span><span class="p">,</span><span class="s2">"md"</span><span class="p">,</span><span class="s2">"txt"</span><span class="p">,</span><span class="s2">"html"</span><span class="p">,</span><span class="s2">"htm"</span><span class="p">,</span><span class="s2">"xml"</span><span class="p">,</span><span class="s2">"js"</span><span class="p">,</span><span class="s2">"csv"</span><span class="p">,</span><span class="s2">"json"</span><span class="p">,</span><span class="s2">"htaccess"</span><span class="p">);</span>
+  <span class="nv">$extension_separator</span> <span class="o">=</span> <span class="s2">"\|"</span><span class="p">;</span>
+  <span class="nv">$command_to_chmod_644</span> <span class="o">=</span> <span class="s1">'find "'</span> <span class="o">.</span> <span class="nv">$dir</span> <span class="o">.</span> <span class="s1">'" -type f -iregex ".*\.\('</span><span class="p">;</span>
+  <span class="k">foreach</span><span class="p">(</span> <span class="nv">$extensions_to_chmod_644</span> <span class="k">as</span> <span class="nv">$ext</span> <span class="p">)</span> <span class="p">{</span>
+      <span class="nv">$command_to_chmod_644</span> <span class="o">.=</span> <span class="nv">$ext</span> <span class="o">.</span> <span class="nv">$extension_separator</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nv">$command_to_chmod_644</span> <span class="o">=</span>
+  <span class="nb">rtrim</span><span class="p">(</span><span class="nv">$command_to_chmod_644</span><span class="p">,</span><span class="nv">$extension_separator</span><span class="p">);</span>
+  <span class="nv">$command_to_chmod_644</span> <span class="o">.=</span> <span class="s1">'\)$" -print0 | xargs -0 chmod 644'</span><span class="o">.</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
+  <span class="nb">shell_exec</span><span class="p">(</span><span class="nv">$command_to_chmod_644</span><span class="p">);</span>
 
-  $command_to_chmod_755 = "find '$dir' -type d -print0 | xargs -0 chmod 755" . PHP_EOL;
-  shell_exec($command_to_chmod_755);
+  <span class="nv">$command_to_chmod_755</span> <span class="o">=</span> <span class="s2">"find '</span><span class="nv">$dir</span><span class="s2">' -type d -print0 | xargs -0 chmod 755"</span> <span class="o">.</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
+  <span class="nb">shell_exec</span><span class="p">(</span><span class="nv">$command_to_chmod_755</span><span class="p">);</span>
 
 </code></pre></div></div>
 

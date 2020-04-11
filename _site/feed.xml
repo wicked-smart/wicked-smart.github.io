@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-11T18:05:57+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Grokking all things in the universe !</title><subtitle>This is an awesome description of my new site , which i'm gonna change later as right now i'm in testing MODE !!!</subtitle><entry><title type="html">Code Snippets</title><link href="http://localhost:4000/2020/03/06/php-script-snippet.html" rel="alternate" type="text/html" title="Code Snippets" /><published>2020-03-06T00:00:00+05:30</published><updated>2020-03-06T00:00:00+05:30</updated><id>http://localhost:4000/2020/03/06/php-script-snippet</id><content type="html" xml:base="http://localhost:4000/2020/03/06/php-script-snippet.html">&lt;h1 id=&quot;php-script&quot;&gt;PHP Script&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-11T18:13:36+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Grokking all things in the universe !</title><subtitle>This is an awesome description of my new site , which i'm gonna change later as right now i'm in testing MODE !!!</subtitle><entry><title type="html">Code Snippets</title><link href="http://localhost:4000/2020/03/06/php-script-snippet.html" rel="alternate" type="text/html" title="Code Snippets" /><published>2020-03-06T00:00:00+05:30</published><updated>2020-03-06T00:00:00+05:30</updated><id>http://localhost:4000/2020/03/06/php-script-snippet</id><content type="html" xml:base="http://localhost:4000/2020/03/06/php-script-snippet.html">&lt;h1 id=&quot;php-script&quot;&gt;PHP Script&lt;/h1&gt;
 
 &lt;p&gt;&lt;strong&gt;permission.php&lt;/strong&gt;&lt;/p&gt;
 
@@ -6,22 +6,23 @@
   &lt;p&gt;php script to configure file and folder permissions of website at one go rather than manually doing chmod’s to every file extension&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &amp;lt;?php
-  $dir = dirname( __FILE__ );
-  $extensions_to_chmod_644 = array(
-  &quot;jpg&quot;,&quot;gif&quot;,&quot;png&quot;,&quot;ico&quot;,&quot;css&quot;,&quot;md&quot;,&quot;txt&quot;,&quot;html&quot;,&quot;htm&quot;,&quot;xml&quot;,&quot;js&quot;,&quot;csv&quot;,&quot;json&quot;,&quot;htaccess&quot;);
-  $extension_separator = &quot;\|&quot;;
-  $command_to_chmod_644 = 'find &quot;' . $dir . '&quot; -type f -iregex &quot;.*\.\(';
-  foreach( $extensions_to_chmod_644 as $ext ) {
-      $command_to_chmod_644 .= $ext . $extension_separator;
-  }
-  $command_to_chmod_644 =
-  rtrim($command_to_chmod_644,$extension_separator);
-  $command_to_chmod_644 .= '\)$&quot; -print0 | xargs -0 chmod 644'. PHP_EOL;
-  shell_exec($command_to_chmod_644);
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+  &lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
+  &lt;span class=&quot;nv&quot;&gt;$dir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;dirname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;__FILE__&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;nv&quot;&gt;$extensions_to_chmod_644&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;s2&quot;&gt;&quot;jpg&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;gif&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;png&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ico&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;css&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;md&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;html&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;htm&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;xml&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;js&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;csv&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;json&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;htaccess&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;nv&quot;&gt;$extension_separator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;\|&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nv&quot;&gt;$command_to_chmod_644&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'find &quot;'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$dir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&quot; -type f -iregex &quot;.*\.\('&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;foreach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$extensions_to_chmod_644&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$ext&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nv&quot;&gt;$command_to_chmod_644&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$ext&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$extension_separator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;nv&quot;&gt;$command_to_chmod_644&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;rtrim&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$command_to_chmod_644&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$extension_separator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;nv&quot;&gt;$command_to_chmod_644&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'\)$&quot; -print0 | xargs -0 chmod 644'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;PHP_EOL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;shell_exec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$command_to_chmod_644&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
-  $command_to_chmod_755 = &quot;find '$dir' -type d -print0 | xargs -0 chmod 755&quot; . PHP_EOL;
-  shell_exec($command_to_chmod_755);
+  &lt;span class=&quot;nv&quot;&gt;$command_to_chmod_755&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;find '&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$dir&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;' -type d -print0 | xargs -0 chmod 755&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;PHP_EOL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;shell_exec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$command_to_chmod_755&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">PHP Script</summary></entry><entry><title type="html">Using gpg2 to exchange messages and files</title><link href="http://localhost:4000/2020/02/29/Using-GPG-to-exchange-messages.html" rel="alternate" type="text/html" title="Using gpg2 to exchange messages and files" /><published>2020-02-29T00:00:00+05:30</published><updated>2020-02-29T00:00:00+05:30</updated><id>http://localhost:4000/2020/02/29/Using-GPG-to-exchange-messages</id><content type="html" xml:base="http://localhost:4000/2020/02/29/Using-GPG-to-exchange-messages.html">&lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;#What is gpg2?&quot;&gt;What is gpg2 ?&lt;/a&gt;&lt;/li&gt;
@@ -402,4 +403,17 @@ sub   rsa4096 2020-04-05 [E] [expires: 2021-01-30]
 
 &lt;p&gt;Decrypted file contents are same as of the original text file&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/gpg2/lorem-ipsum.png&quot; alt=&quot;lorem-ipsum.txt&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">What is gpg2 ? Where and how gpg2 is used? Create GPG2 keys Generate a Revocation Certificate Exchange Public Keys Export Your Public Keys Import and Validate a Public Key Submit Your Public Key to a Key Server Encrypt a Message Decrypt a Message</summary></entry></feed>
+&lt;p&gt;&lt;img src=&quot;/assets/gpg2/lorem-ipsum.png&quot; alt=&quot;lorem-ipsum.txt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I have more &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; and &lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; to say up here&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;To say down here &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;To say down here, again &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name></name></author><summary type="html">What is gpg2 ? Where and how gpg2 is used? Create GPG2 keys Generate a Revocation Certificate Exchange Public Keys Export Your Public Keys Import and Validate a Public Key Submit Your Public Key to a Key Server Encrypt a Message Decrypt a Message</summary></entry></feed>
