@@ -4,6 +4,10 @@ title:  Using gpg2 to exchange messages and files
 Date: 2020-23-02 06:41  PM +05:30
 ---
 
+### TODOs
+  - [ ] section for `Using gpg-key for ssh authentication` in `where and how gpg2 is used?` is to be added
+
+
 * [What is gpg2 ?](#What is gpg2?)
 * [Where and how gpg2 is used?](#Uses of gpg)
 * [Create GPG2 keys](#Create GPG2 keys)
