@@ -27,7 +27,7 @@ Folder and file's permissions before running below script:
   <?php
   $dir = dirname( __FILE__ );
   $extensions_to_chmod_644 = array(
-  "jpg","gif","png","ico","css","md","txt","html","htm","xml","js","csv","json","htaccess");
+  "jpg","gif","php","png","ico","css","md","txt","html","htm","xml","js","csv","json","htaccess");
   $extension_separator = "\|";
   $command_to_chmod_644 = 'find "' . $dir . '" -type f -iregex ".*\.\(';
   foreach( $extensions_to_chmod_644 as $ext ) {
