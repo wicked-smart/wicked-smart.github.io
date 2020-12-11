@@ -5,8 +5,8 @@ Date: 2020-12-10 06:21  PM +05:30
 ---
 
 
-## Followings are the links for learning flutter effectively (**Project Oriented Learning After getting command Over the Basics**)
-	
+## Followings are the links for learning flutter effectively
+
 	## Lists :-
 
 	1. [dart official website](https://dart.dev/)
@@ -16,13 +16,13 @@ Date: 2020-12-10 06:21  PM +05:30
 	5. **For Flutter Testing**
 		- [Flutter Testing 1](https://dart.dev/guides/testing)
 		- [Integration Testing](https://medium.com/flutter/updates-on-flutter-testing-f54aa9f74c7e)
-		- 
+		-
 	6. [Material Design]()
-	- [State Management in Flutter]()
-	- **Popular you tube Videos , Channels and Playlists**
+	7. [State Management in Flutter]()
+	8. **Popular you tube Videos , Channels and Playlists**
 		- [MtechViral](https://www.youtube.com/c/MTechViral/videos)
 		- [Flutter Official Channel's Playlist](https://www.youtube.com/watch?v=d_m5csmrf7I&list=PLjxrf2q8roU1UJ0OEpANodVMVm1GeE7Ti)
 
 
-	- [Material Design](https://material.io/design)
-	- 
+	9. [Material Design](https://material.io/design)
+	10. 
