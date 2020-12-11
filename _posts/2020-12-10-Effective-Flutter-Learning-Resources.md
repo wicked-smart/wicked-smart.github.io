@@ -5,9 +5,7 @@ Date: 2020-12-10 06:21  PM +05:30
 ---
 
 
-## Followings are the links for learning flutter effectively
 
-	## Lists :-
 
 	1. [dart official website](https://dart.dev/)
 	2. [flutter official website](https://flutter.dev/)
@@ -25,4 +23,4 @@ Date: 2020-12-10 06:21  PM +05:30
 
 
 	9. [Material Design](https://material.io/design)
-	10. 
+	10.
