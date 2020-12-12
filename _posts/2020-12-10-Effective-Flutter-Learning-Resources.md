@@ -21,3 +21,9 @@ Date: 2020-12-10 06:21  PM +05:30
 
 	9. [Material Design](https://material.io/design)
 	10.
+
+
+Some Javascript Shit
+```
+var foo = fun(this.foo);
+```
