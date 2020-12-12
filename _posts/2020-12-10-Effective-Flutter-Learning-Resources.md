@@ -5,9 +5,6 @@ Date: 2020-12-10 06:21  PM +05:30
 ---
 
 
-
-
-	1. [dart official website](https://dart.dev/)
 	2. [flutter official website](https://flutter.dev/)
 	3. [@iampk's twitter thread link](https://twitter.com/imthepk/status/1332272360100044800?s=20)
 	4. [Gsoc guys github page]()
