@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-04-15T17:22:43+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Grokking all things in the universe !</title><subtitle>This is an awesome description of my new site , which i'm gonna change later as right now i'm in testing MODE !!!</subtitle><entry><title type="html">Flutter Learning</title><link href="http://localhost:4000/2020/12/11/foo.html" rel="alternate" type="text/html" title="Flutter Learning" /><published>2020-12-11T00:00:00+05:30</published><updated>2020-12-11T00:00:00+05:30</updated><id>http://localhost:4000/2020/12/11/foo</id><content type="html" xml:base="http://localhost:4000/2020/12/11/foo.html">&lt;p&gt;&lt;a href=&quot;https://twitter.com/artijourno/status/1337249832671440896?s=20&quot;&gt;link to twitter &lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">link to twitter</summary></entry><entry><title type="html">Effective Flutter Learning Resources</title><link href="http://localhost:4000/2020/12/10/Effective-Flutter-Learning-Resources.html" rel="alternate" type="text/html" title="Effective Flutter Learning Resources" /><published>2020-12-10T00:00:00+05:30</published><updated>2020-12-10T00:00:00+05:30</updated><id>http://localhost:4000/2020/12/10/Effective-Flutter-Learning-Resources</id><content type="html" xml:base="http://localhost:4000/2020/12/10/Effective-Flutter-Learning-Resources.html">&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;2. [flutter official website](https://flutter.dev/)
+3. [@iampk's twitter thread link](https://twitter.com/imthepk/status/1332272360100044800?s=20)
+4. [Gsoc guys github page]()
+5. **For Flutter Testing**
+	- [Flutter Testing 1](https://dart.dev/guides/testing)
+	- [Integration Testing](https://medium.com/flutter/updates-on-flutter-testing-f54aa9f74c7e)
+	-
+6. [Material Design]()
+7. [State Management in Flutter]()
+8. **Popular you tube Videos , Channels and Playlists**
+	- [MtechViral](https://www.youtube.com/c/MTechViral/videos)
+	- [Flutter Official Channel's Playlist](https://www.youtube.com/watch?v=d_m5csmrf7I&amp;amp;list=PLjxrf2q8roU1UJ0OEpANodVMVm1GeE7Ti)
+
+
+9. [Material Design](https://material.io/design)
+10.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Some Javascript Shit&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var foo = fun(this.foo);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">2. [flutter official website](https://flutter.dev/) 3. [@iampk's twitter thread link](https://twitter.com/imthepk/status/1332272360100044800?s=20) 4. [Gsoc guys github page]() 5. **For Flutter Testing** - [Flutter Testing 1](https://dart.dev/guides/testing) - [Integration Testing](https://medium.com/flutter/updates-on-flutter-testing-f54aa9f74c7e) - 6. [Material Design]() 7. [State Management in Flutter]() 8. **Popular you tube Videos , Channels and Playlists** - [MtechViral](https://www.youtube.com/c/MTechViral/videos) - [Flutter Official Channel's Playlist](https://www.youtube.com/watch?v=d_m5csmrf7I&amp;amp;list=PLjxrf2q8roU1UJ0OEpANodVMVm1GeE7Ti)</summary></entry><entry><title type="html">Journey Of A Web Request</title><link href="http://localhost:4000/2020/06/21/Journey-of-a-web-request.html" rel="alternate" type="text/html" title="Journey Of A Web Request" /><published>2020-06-21T00:00:00+05:30</published><updated>2020-06-21T00:00:00+05:30</updated><id>http://localhost:4000/2020/06/21/Journey-of-a-web-request</id><content type="html" xml:base="http://localhost:4000/2020/06/21/Journey-of-a-web-request.html"></content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">My Learnings about web-performance</title><link href="http://localhost:4000/web/performance/2020/03/06/Web-performance.html" rel="alternate" type="text/html" title="My Learnings about web-performance" /><published>2020-03-06T07:14:20+05:30</published><updated>2020-03-06T07:14:20+05:30</updated><id>http://localhost:4000/web/performance/2020/03/06/Web-performance</id><content type="html" xml:base="http://localhost:4000/web/performance/2020/03/06/Web-performance.html">&lt;p&gt;The Main Components of the web performance:-&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Network Time&lt;/strong&gt; + &lt;strong&gt;Generation Time&lt;/strong&gt; + &lt;strong&gt;Render Time&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The Main Goal here is to cut down on the HTML , CSS, Javascript, Images etc. for the pages recieved which would lower the &lt;strong&gt;Network Time&lt;/strong&gt; and the &lt;strong&gt;Render Time&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Some of the Strategies Include :-&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Cutting down the Cookie Bytes/page&lt;/li&gt;
+  &lt;li&gt;Cutting Down on the Javascript (storing it client side, using component library for common features)&lt;/li&gt;
+  &lt;li&gt;Caching and Reusing CSS bytes per page since components share CSS rules&lt;/li&gt;
+  &lt;li&gt;PIPELINING THE WHOLE THING:-  Sending partial responce at certain time interval (say 10-15 ms) to the browser , thus reducing overall &lt;strong&gt;Time-To-Interact(TTI)&lt;/strong&gt;  [Overlapping Render time with the Generation time ]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;important-links-to-refer-for-above-topic&quot;&gt;Important links to refer for above topic&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://medium.com/engineering-housing/the-secret-formula-hidden-tips-for-improved-web-performance-a7dc37e2f24f&quot;&gt;the-secret-formula-hidden-tips-for-improved-web-performance&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://instant.page/intensity&quot;&gt;instant. page&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://yuppi.es/&quot;&gt;yuppi. es&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.facebook.com/note.php?note_id=307069903919&quot;&gt;facebook note about web performance&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.facebook.com/notes/facebook-engineering/bigpipe-pipelining-web-pages-for-high-performance/389414033919/&quot;&gt;facebook BigPipe&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developers.google.com/web/fundamentals/&quot;&gt;google developers web fundamantals&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://addyosmani.com/blog/lazy-loading/&quot;&gt;lazy loading&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://web.dev/measure/&quot;&gt;web dev measure&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.logrocket.com/rethinking-frontend-apm/&quot;&gt;logrocket rethinking frontend apm&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.google.com/presentation/d/1snxo-EKx6PseQeznhfr-VVTEQ71EAMOdbDQ0pNR5jEA/edit#slide=id.g6b8bf89bb2_0_43&quot;&gt;divjot singh housing SDE3 slides on web performance&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;em&gt;More links to be added soon&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;advice-for-best-learning-such-thing-is-to-try-all-the-learned-concepts-on-nay-website--build-some-projact-around-these-learnings&quot;&gt;Advice for best learning such thing is to try all the learned concepts on nay website , build some projact around these learnings&lt;/h2&gt;</content><author><name></name></author><summary type="html">The Main Components of the web performance:-</summary></entry><entry><title type="html">Code Snippets</title><link href="http://localhost:4000/2020/03/06/Code-Snippets.html" rel="alternate" type="text/html" title="Code Snippets" /><published>2020-03-06T00:00:00+05:30</published><updated>2020-03-06T00:00:00+05:30</updated><id>http://localhost:4000/2020/03/06/Code-Snippets</id><content type="html" xml:base="http://localhost:4000/2020/03/06/Code-Snippets.html">&lt;h3 id=&quot;todos&quot;&gt;ToDOs&lt;/h3&gt;
+
+&lt;ul class=&quot;task-list&quot;&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;Add permissions image before and after running the script&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Add Explanation of how 600 and 700 is a security bug for any website !&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Explantion of script !&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;php-script&quot;&gt;PHP Script&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;permission.php&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;php script to configure file and folder permissions of website at one go rather than manually doing chmod’s to every file extension&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I used this script while solving &lt;a href=&quot;https://cdn.cs50.net/2016/x/psets/7/pset7/pset7.html&quot;&gt;CS50’s Pset7&lt;/a&gt;. When you first download the pset’s boilerplate code, the folder’s permissions are mostly 700’s for folders and 600’s for files. This script assigns  644’s to the files and 755’s to the folders&lt;/p&gt;
+
+&lt;p&gt;Folder and file’s permissions before running below script:
+&lt;img src=&quot;/assets/code-snippets/permissions-before.png&quot; alt=&quot;permisions-before.png&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+  &lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
+  &lt;span class=&quot;nv&quot;&gt;$dir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;dirname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;__FILE__&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;nv&quot;&gt;$extensions_to_chmod_644&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;s2&quot;&gt;&quot;jpg&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;gif&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;php&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;png&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ico&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;css&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;md&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;html&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;htm&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;xml&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;js&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;csv&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;json&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;htaccess&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;nv&quot;&gt;$extension_separator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;\|&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nv&quot;&gt;$command_to_chmod_644&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'find &quot;'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$dir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&quot; -type f -iregex &quot;.*\.\('&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;foreach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$extensions_to_chmod_644&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$ext&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nv&quot;&gt;$command_to_chmod_644&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$ext&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$extension_separator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;nv&quot;&gt;$command_to_chmod_644&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;rtrim&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$command_to_chmod_644&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$extension_separator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;nv&quot;&gt;$command_to_chmod_644&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'\)$&quot; -print0 | xargs -0 chmod 644'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;PHP_EOL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;shell_exec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$command_to_chmod_644&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+  &lt;span class=&quot;nv&quot;&gt;$command_to_chmod_755&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;find '&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$dir&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;' -type d -print0 | xargs -0 chmod 755&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;PHP_EOL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;shell_exec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$command_to_chmod_755&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Folder and Files permissions after running the script:
+&lt;img src=&quot;/assets/code-snippets/permissions-after.png&quot; alt=&quot;permisions-after.png&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">ToDOs</summary></entry><entry><title type="html">Using gpg2 to exchange messages and files</title><link href="http://localhost:4000/2020/02/29/Using-GPG-to-exchange-messages.html" rel="alternate" type="text/html" title="Using gpg2 to exchange messages and files" /><published>2020-02-29T00:00:00+05:30</published><updated>2020-02-29T00:00:00+05:30</updated><id>http://localhost:4000/2020/02/29/Using-GPG-to-exchange-messages</id><content type="html" xml:base="http://localhost:4000/2020/02/29/Using-GPG-to-exchange-messages.html">&lt;h3 id=&quot;todos&quot;&gt;TODOs&lt;/h3&gt;
+&lt;ul class=&quot;task-list&quot;&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;
+    &lt;p&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;section for &lt;code class=&quot;highlighter-rouge&quot;&gt;Using gpg-key for ssh authentication&lt;/code&gt; in &lt;code class=&quot;highlighter-rouge&quot;&gt;where and how gpg2 is used?&lt;/code&gt; is to be added&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;a href=&quot;#What is gpg2?&quot;&gt;What is gpg2 ?&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;a href=&quot;#Uses of gpg&quot;&gt;Where and how gpg2 is used?&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;a href=&quot;#Create GPG2 keys&quot;&gt;Create GPG2 keys&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;a href=&quot;#Generate a Revocation Certificate&quot;&gt;Generate a Revocation Certificate&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;a href=&quot;#Exchange Public Keys&quot;&gt;Exchange Public Keys&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#Export Your Public Keys&quot;&gt;Export Your Public Keys&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#Import and Validate a Public Key&quot;&gt;Import and Validate a Public Key&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#Submit Your Public Key to a Key Server&quot;&gt;Submit Your Public Key to a Key Server&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;a href=&quot;#Encrypt a Message&quot;&gt;Encrypt a Message&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;a href=&quot;#Decrypt a Message&quot;&gt;Decrypt a Message&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;what-is-gpg2&quot;&gt;What is gpg2?&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;GNU Privacy Gaurd (GnuPG), Also Known as GPG, is a tool for secure communication  used to exchange encrypted files and messages between client machines using Public-Key Cryptography Methods.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;uses-of-gpg&quot;&gt;Uses of gpg&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Checking file Integrity&lt;/strong&gt;:-
+   RStudio Signed Builds
+Official RStudio builds for Linux-based operating systems may be signed with a GnuPG key.
+&lt;strong&gt;gpg2&lt;/strong&gt; can be used to validate the binary ourselves to
+    &lt;ul&gt;
+      &lt;li&gt;Ensure the binaries are genuine artifacts produces by RStudio, and&lt;/li&gt;
+      &lt;li&gt;they have not been tampered with any third party during transmission&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;Step 1: Obtaining the Public Key:-&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Importing RStudio Public Code-Signing Key from keysever using gpg2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;gpg2 –keyserver keys.gnupg.net –recv-keys 3F32EE77E331692F&lt;/p&gt;
+    &lt;/blockquote&gt;
+
+    &lt;p&gt;Step 2: Validating Build Signatures:-&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;    dpkg-sig --verify rstudio-download-1.2.3.deb
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/gpg2/Validate-RStudio-Code-Signing.png&quot; alt=&quot;key-import-image&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Sending Encrypted Messages and Files&lt;/strong&gt; * Encrypt Document to be sent&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;gpg2 –output encrypted-doc.gpg –encrypt –sign –armor –recipient tomcrse61@gmail.com –recipient kumar877prem@gmail.com doc-to-encrypt.txt&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Decrypt Document Recieved&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;gpg2 –output decrypted-doc –decrypt doc-to-decrypt.gpg&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Using gpg-key for ssh authentication&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;create-gpg2-keys&quot;&gt;Create GPG2 Keys&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Download and Install the most recent version of GPG Command Line Tool&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;sudo apt update
+sudo apt install gnupg&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Create a new primary keypair&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;gpg2 –full-generate-keys&lt;/p&gt;
+    &lt;/blockquote&gt;
+
+    &lt;p&gt;&lt;strong&gt;&lt;em&gt;ScreenDump of the above command&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;~/$ gpg2 --full-gen-key
+gpg (GnuPG) 2.2.4; Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+~/$ Please select what kind of key you want:
+   (1) RSA and RSA (default)
+   (2) DSA and Elgamal
+   (3) DSA (sign only)
+   (4) RSA (sign only)
+Your selection? 1
+RSA keys may be between 1024 and 4096 bits long.
+What keysize do you want? (3072) 4096
+Requested keysize is 4096 bits
+Please specify how long the key should be valid.
+         0 = key does not expire
+      &amp;lt;n&amp;gt;  = key expires in n days
+      &amp;lt;n&amp;gt;w = key expires in n weeks
+      &amp;lt;n&amp;gt;m = key expires in n months
+      &amp;lt;n&amp;gt;y = key expires in n years
+~/$ Key is valid for? (0) 10m
+Key expires at Sat Jan 30 23:54:15 2021 UTC
+~/$ Is this correct? (y/N) y
+
+GnuPG needs to construct a user ID to identify your key.
+
+Real name: prem kumar
+Email address: marzaanvan@gmail.com
+Comment: NA
+You selected this USER-ID:
+    &quot;prem kumar (NA) &amp;lt;marzaanvan@gmail.com&amp;gt;&quot;
+
+~/$ Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? o
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+gpg: key 8B49243047552028 marked as ultimately trusted
+gpg: revocation certificate stored as '/home/ubuntu/.gnupg/openpgp-revocs.d/9900A9C62DE86CD2941774AD8B49243047552028.rev'
+public and secret key created and signed.
+
+pub   rsa4096 2020-04-05 [SC] [expires: 2021-01-30]
+      9900A9C62DE86CD2941774AD8B49243047552028
+uid                      prem kumar (NA) &amp;lt;marzaanvan@gmail.com&amp;gt;
+sub   rsa4096 2020-04-05 [E] [expires: 2021-01-30]
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The system may require more entropy to generate the keypair, in a new shell session, install the &lt;code class=&quot;highlighter-rouge&quot;&gt;rng-utils&lt;/code&gt; package:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;sudo apt install rng-tools&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Check and feed random data from an entropy source (e.g. hardware RNG device) to an entropy sink (e.g. kernel entropy pool) to provide the needed entropy for a secure keypair to be generated:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;rngd -f -r /dev/urandom&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Check the amount of entropy available on your Linode. The value should be somewhere near 3000 for keypair generation.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;cat /proc/sys/kernel/random/entropy_avail&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Verify the keys on your public keyring:&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;gpg2 –list-keys&lt;/p&gt;
+    &lt;/blockquote&gt;
+
+    &lt;p&gt;The example output contains two public keys:
+&lt;img src=&quot;/assets/gpg2/gpg-keys.png&quot; alt=&quot;keyring&quot; /&gt;&lt;/p&gt;
+
+    &lt;p&gt;Each value in the list represents the following information:&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;
+        &lt;p&gt;Public key: &lt;code class=&quot;highlighter-rouge&quot;&gt;pub&lt;/code&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Key size and type: &lt;code class=&quot;highlighter-rouge&quot;&gt;4096R&lt;/code&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Short key ID: &lt;code class=&quot;highlighter-rouge&quot;&gt;A11C0F78&lt;/code&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Creation date: &lt;code class=&quot;highlighter-rouge&quot;&gt;2018-08-02&lt;/code&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Expiration date: &lt;code class=&quot;highlighter-rouge&quot;&gt;[expires: 2018-09-01]&lt;/code&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;User IDs: &lt;code class=&quot;highlighter-rouge&quot;&gt;exampleName2 (example comment) &amp;lt;user2@example.com&amp;gt;&lt;/code&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Subkey: &lt;code class=&quot;highlighter-rouge&quot;&gt;sub&lt;/code&gt;&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;generate-a-revocation-certificate-&quot;&gt;Generate a Revocation Certificate:-&lt;/h2&gt;
+
+&lt;p&gt;A revocation certificate is useful if you forget your passphrase or if your private key is somehow compromised. It is used to notify others that the public key is no longer valid. Create the revocation certificate immediately after generating your public key.&lt;/p&gt;
+
+&lt;p&gt;Generate a revocation certificate. Replace &lt;code class=&quot;highlighter-rouge&quot;&gt;user@example.com&lt;/code&gt; with the email address associated with the public key:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;gpg2 –output revoke.asc –gen-revoke user@example.com&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;A prompt will ask you to select a reason for the revocation and provide an optional description. The default reason is recommended&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The revocation certificate will be saved to the current directory as a file named &lt;code class=&quot;highlighter-rouge&quot;&gt;revoke.asc&lt;/code&gt;. Save the certificate to a safe location on a different system so that you can access it in case your key is compromised in the future.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;exchange-public-keys&quot;&gt;Exchange Public Keys&lt;/h2&gt;
+&lt;p&gt;After Generating the keys , one needs to exchange the public keys in order to communicate securely. This can be done using two methods&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Importing the recipient public key manually&lt;/li&gt;
+  &lt;li&gt;Submitting the keys to the keyserver to be publically accessed any other client&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;export-your-public-key&quot;&gt;Export Your Public Key&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Export the public key using following command.Replace &lt;code class=&quot;highlighter-rouge&quot;&gt;public-key.gpg&lt;/code&gt; with your choice of name and &lt;code class=&quot;highlighter-rouge&quot;&gt;user@example.com&lt;/code&gt; with email associated with the public key.This will save the key in the current directory itself.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; gpg2 --armour --output public-key.gpg --export user@example.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Send the &lt;code class=&quot;highlighter-rouge&quot;&gt;public-key.gpg&lt;/code&gt; file to the recipient in an email or copy and paste the contents of the &lt;code class=&quot;highlighter-rouge&quot;&gt;public-key.gpg&lt;/code&gt; file.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The recipient should import the public key and validate it in order to use it to decrypt a message sent by you.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;import-and-validate-a-public-key&quot;&gt;Import and Validate a Public Key&lt;/h2&gt;
+&lt;p&gt;One can add the recipient’s public key to one’s public keyring by importing it.The user public key must be first recieved using email or some other format, before it can be imported in the public ring&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Once you’ve received the user’s public key and the &lt;code class=&quot;highlighter-rouge&quot;&gt;.gpg&lt;/code&gt; file is saved to your local disk, import it to your public key ring&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;gpg2 –import public-key.gpg&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Verify that the public key has been added to your public key ring&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; gpg2 --list-keys
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Check the key’s fingerprint:
+     The output will resemble the following&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/gpg2/gpg-fingerprint.png&quot; alt=&quot;fingerprint&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ask the owner of the public key to send you their public key’s fingerprint and verify that the fingerprint values match. If they match, you can be confident that the key you have added is a valid copy of the owner’s public key.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;gpg2 –fingerprint marzaanvan@gmail.com&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;When you have verified the public key’s fingerprint, sign the public key with your own key to officially validate it. Replace &lt;code class=&quot;highlighter-rouge&quot;&gt;user3@example3.com&lt;/code&gt; with the associated email for the key you are validating:&lt;/p&gt;
+
+&lt;p&gt;Enter your passphrase when prompted.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; gpg2 --sign-key user3@example3.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;View the public key’s signatures to verify that your signature has been added:&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;gpg2 –check-sigs user3@example3.com&lt;/p&gt;
+    &lt;/blockquote&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/assets/gpg2/check-sigs.png&quot; alt=&quot;validate-sigs&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;You can export the signature to the public key and then send the signed copy back to the owner of the public key to boost the key’s level of confidence for future users:&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;gpg2 –output signed-key.gpg –export –armor user3@example3.com&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Send the signed key to the public key owner via email so they can import the signature to their GPG database&lt;/p&gt;
+
+&lt;h2 id=&quot;submit-your-public-key-to-a-key-server&quot;&gt;Submit Your Public Key to a Key Server&lt;/h2&gt;
+
+&lt;p&gt;Information about default keyserver is present in &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.gnupg/gpg.cnf&lt;/code&gt; file (most likely set as &lt;code class=&quot;highlighter-rouge&quot;&gt;hkp://keys.gnupg.net&lt;/code&gt;), but any other source can be listed using &lt;code class=&quot;highlighter-rouge&quot;&gt;--keyserver&lt;/code&gt; flag of gpg2 option. Following are the steps required to Submit a Public Key to a Key-Server&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Find the long key ID for the public key you would like to send to the key server:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;gpg2 –keyid-format long –list-keys user@example.com&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Where , &lt;code class=&quot;highlighter-rouge&quot;&gt;user@example.com&lt;/code&gt; is to be replaced with associated email-id of the key.&lt;/p&gt;
+
+&lt;p&gt;One Will see Output similar to the below picture:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/gpg2/long-key-crop.png&quot; alt=&quot;long-key&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The long key ID is the value after the key size &lt;code class=&quot;highlighter-rouge&quot;&gt;rsa4096&lt;/code&gt; in the &lt;code class=&quot;highlighter-rouge&quot;&gt;pub&lt;/code&gt; row. In the example the long key ID is &lt;code class=&quot;highlighter-rouge&quot;&gt;D536B962F4610A01&lt;/code&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;To send your public key to the default key server use the following command and replace &lt;code class=&quot;highlighter-rouge&quot;&gt;keyid&lt;/code&gt; with your public key’s long key ID:&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;gpg2 –keyserver server-name  –send-keys keyid&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Anyone can request your public key from the key server with the following command:&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;gpg2 –keyserver server-name  –recv-keys keyid&lt;/p&gt;
+    &lt;/blockquote&gt;
+
+    &lt;p&gt;The public key will be added to the user’s trust database using &lt;code class=&quot;highlighter-rouge&quot;&gt;trustdb.gpg&lt;/code&gt; file.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;exchanging-messages-using-gpg2&quot;&gt;Exchanging Messages using gpg2&lt;/h2&gt;
+
+&lt;p&gt;To Demonstrate this we’ll take a text file &lt;code class=&quot;highlighter-rouge&quot;&gt;lorem-ipsum.txt&lt;/code&gt; , encrypt it using &lt;code class=&quot;highlighter-rouge&quot;&gt;tomcrse61@gmail.com&lt;/code&gt;’s gpg-key , send to my cs50-ide and decrypt both &lt;code class=&quot;highlighter-rouge&quot;&gt;.gpg&lt;/code&gt;  files  to show the text content. We’ll attach the screenshots for every step.&lt;/p&gt;
+
+&lt;h2 id=&quot;encrypt-a-messagefile&quot;&gt;Encrypt a Message/File&lt;/h2&gt;
+
+&lt;p&gt;First we import &lt;code class=&quot;highlighter-rouge&quot;&gt;tomcrse61@gmail.com&lt;/code&gt;’s public key , validate it by cross-checking their fingerprint and finally encrypt using their public-key , which finally will be decrypted using only thier own private key.&lt;/p&gt;
+
+&lt;p&gt;To Encrypt &lt;code class=&quot;highlighter-rouge&quot;&gt;lorem-ipsum.txt&lt;/code&gt; :&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;gpg2 –output lorem-ipsum.gpg –encrypt –sign –armor –recipient tomcrse61@gmail.com -recipient kumar877prem@gmail.com lorem-ipsum.txt&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This Will Produce &lt;code class=&quot;highlighter-rouge&quot;&gt;lorem-ipsum.gpg&lt;/code&gt; as the encrypted file.&lt;/p&gt;
+
+&lt;p&gt;The extension &lt;code class=&quot;highlighter-rouge&quot;&gt;.gpg&lt;/code&gt; is used for encrypted/binary data and &lt;code class=&quot;highlighter-rouge&quot;&gt;.asc&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;.sig&lt;/code&gt; is used for detached or clearsign signatures. Including the &lt;code class=&quot;highlighter-rouge&quot;&gt;--armor&lt;/code&gt; flag will encrypt the message in plain text.&lt;/p&gt;
+
+&lt;h2 id=&quot;decrypt-a-messagefile&quot;&gt;Decrypt a Message/File&lt;/h2&gt;
+
+&lt;p&gt;A message will need to have been encrypted with your public key for you to able to decrypt it with your private key. Ensure that anyone that will be sending you an encrypted message has a copy of your public key.&lt;/p&gt;
+
+&lt;p&gt;To decrypt a message:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;gpg –output lorem-ipsum.txt  –decrypt lorem-ipsum.gpg&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Decrypted file contents are same as of the original text file&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/gpg2/lorem-ipsum.png&quot; alt=&quot;lorem-ipsum.txt&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">TODOs section for Using gpg-key for ssh authentication in where and how gpg2 is used? is to be added</summary></entry></feed>
